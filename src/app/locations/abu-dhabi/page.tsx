@@ -71,7 +71,7 @@ export default function AbuDhabiPage() {
 
       <main className="min-h-screen bg-[#0D0D0D] text-[#F7F7F7] pt-24 pb-32">
         <div className="max-w-4xl mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#4A4845] uppercase tracking-[0.3em] font-black mb-12">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#6B6560] uppercase tracking-[0.3em] font-black mb-12">
             <Link href="/" className="hover:text-[#C62B1E] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-[#6B6560]">Locations</span>
@@ -88,7 +88,7 @@ export default function AbuDhabiPage() {
               Viral Marketing<br />
               <span className="text-[#C62B1E]">in Abu Dhabi.</span>
             </h1>
-            <p className="text-[#9B9690] text-lg font-light max-w-2xl leading-relaxed">
+            <p className="text-[#A8A49E] text-lg font-light max-w-2xl leading-relaxed">
               Abu Dhabi brands operate in one of the world&apos;s most premium, trust-driven markets. DUCKYOURBRAND builds organic virality systems calibrated to Abu Dhabi audience behavior — not generic templates, not paid boosts. Content that earns attention by being worth sharing.
             </p>
           </div>
@@ -127,7 +127,7 @@ export default function AbuDhabiPage() {
             <Link href="/#contact" className="inline-flex items-center gap-2 bg-[#C62B1E] text-[#F7F7F7] text-[10px] font-black px-8 py-4 uppercase tracking-[0.3em] hover:bg-[#a82318] transition-colors duration-200">
               Work With Us in Abu Dhabi
             </Link>
-            <Link href="/" className="text-[10px] font-black text-[#4A4845] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
+            <Link href="/" className="text-[10px] font-black text-[#6B6560] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
               ← Back to Home
             </Link>
           </div>

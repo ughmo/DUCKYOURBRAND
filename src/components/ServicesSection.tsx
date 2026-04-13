@@ -67,7 +67,7 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-[#9B9690] text-lg max-w-xl font-light"
+            className="text-[#A8A49E] text-lg max-w-xl font-light"
           >
             Four things. Each one tied to a specific result. None of them are content calendars.
           </motion.p>
@@ -97,7 +97,7 @@ export function ServicesSection() {
               <h3 className="text-xl font-black text-[#F7F7F7] uppercase mb-4 leading-tight group-hover:text-[#F7F7F7]">
                 {service.title}
               </h3>
-              <p className="text-[#6B6560] font-light text-sm leading-relaxed mb-6 group-hover:text-[#9B9690] transition-colors duration-300">
+              <p className="text-[#6B6560] font-light text-sm leading-relaxed mb-6 group-hover:text-[#A8A49E] transition-colors duration-300">
                 {service.description}
               </p>
               <div className="flex flex-wrap gap-2">

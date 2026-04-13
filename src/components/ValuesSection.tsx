@@ -52,7 +52,7 @@ export function ValuesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="text-[#9B9690] font-light leading-relaxed mb-10"
+              className="text-[#A8A49E] font-light leading-relaxed mb-10"
             >
               These aren't company values on a wall. They are the operating system of every campaign, every post, every result.
             </motion.p>
@@ -76,7 +76,7 @@ export function ValuesSection() {
               <div className="relative">
                 <div className="text-[10px] text-[#C62B1E] font-black uppercase tracking-[0.4em] mb-2">Brand Archetype</div>
                 <div className="text-2xl font-black text-[#F7F7F7] uppercase mb-2">The Outlaw</div>
-                <p className="text-[#9B9690] text-sm font-light">
+                <p className="text-[#A8A49E] text-sm font-light">
                   "The safe choice costs more than you think."
                 </p>
               </div>
@@ -95,7 +95,7 @@ export function ValuesSection() {
                 className="group bg-[#0D0D0D] border-b border-[#1A1A1A] p-6 flex gap-6 hover:bg-[#1A1A1A] transition-all duration-300 cursor-default"
               >
                 <motion.span
-                  className="text-[#3A3835] font-black text-sm mt-0.5 flex-shrink-0 group-hover:text-[#C62B1E] transition-colors duration-300"
+                  className="text-[#6B6560] font-black text-sm mt-0.5 flex-shrink-0 group-hover:text-[#C62B1E] transition-colors duration-300"
                 >
                   {value.number}
                 </motion.span>
@@ -103,7 +103,7 @@ export function ValuesSection() {
                   <h3 className="font-black text-[#F7F7F7] uppercase tracking-wide mb-2 text-sm group-hover:text-[#F7F7F7] transition-colors">
                     {value.title}
                   </h3>
-                  <p className="text-[#6B6560] text-sm font-light leading-relaxed group-hover:text-[#9B9690] transition-colors duration-300">
+                  <p className="text-[#6B6560] text-sm font-light leading-relaxed group-hover:text-[#A8A49E] transition-colors duration-300">
                     {value.description}
                   </p>
                 </div>

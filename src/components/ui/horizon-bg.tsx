@@ -3,8 +3,11 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 /**
- * Lightweight Three.js starfield + nebula + mountain silhouettes.
- * No EffectComposer / bloom — direct renderer.render for 60fps on mid-range devices.
+ * Optimised starfield + mountain silhouettes.
+ * - Throttled to 30 fps (halves GPU work vs 60 fps)
+ * - Paused via IntersectionObserver when off-screen
+ * - DPR capped at 1 — biggest single win on high-DPI devices
+ * - Reduced geometry counts
  */
 export function HorizonBg() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -13,128 +16,89 @@ export function HorizonBg() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    // ── Scene ──────────────────────────────────────────────────────────
-    const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x000000, 0.00022);
-
     const W = canvas.clientWidth  || window.innerWidth;
     const H = canvas.clientHeight || window.innerHeight;
+
+    // Cap DPR at 1 — rendering at 2× is expensive and invisible at this scale
+    const dpr = 1;
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x000000);
+    scene.fog = new THREE.FogExp2(0x000000, 0.00022);
 
     const camera = new THREE.PerspectiveCamera(70, W / H, 0.1, 1500);
     camera.position.set(0, 22, 100);
 
-    // Cap pixel ratio at 1.5 — key perf win on Retina / high-DPI mobile
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true, powerPreference: "high-performance" });
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: false,
+      alpha: false,
+      powerPreference: "high-performance",
+      precision: "mediump", // mediump vs highp — big win, invisible difference here
+    });
     renderer.setSize(W, H);
     renderer.setPixelRatio(dpr);
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 0.55;
 
-    // ── Stars — single layer, 1800 pts ─────────────────────────────────
-    const starCount = 1800;
+    // ── Stars ─────────────────────────────────────────────────────────
+    const starCount = 1200; // was 2000
     const starGeo = new THREE.BufferGeometry();
     const starPos = new Float32Array(starCount * 3);
-    const starCol = new Float32Array(starCount * 3);
-    const starSz  = new Float32Array(starCount);
+    const starColors = new Float32Array(starCount * 3);
 
     for (let i = 0; i < starCount; i++) {
       const r = 250 + Math.random() * 650;
-      const t = Math.random() * Math.PI * 2;
-      const p = Math.acos(Math.random() * 2 - 1);
-      starPos[i * 3]     = r * Math.sin(p) * Math.cos(t);
-      starPos[i * 3 + 1] = r * Math.sin(p) * Math.sin(t);
-      starPos[i * 3 + 2] = r * Math.cos(p);
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(Math.random() * 2 - 1);
+      starPos[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
+      starPos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      starPos[i * 3 + 2] = r * Math.cos(phi);
 
-      // 88% white, 12% DYB red tint
-      const c = new THREE.Color();
-      if (Math.random() < 0.88) c.setHSL(0, 0, 0.75 + Math.random() * 0.25);
-      else c.set(0xc62b1e);
-      starCol[i * 3] = c.r; starCol[i * 3 + 1] = c.g; starCol[i * 3 + 2] = c.b;
-      starSz[i] = Math.random() * 1.8 + 0.4;
+      if (Math.random() < 0.88) {
+        const v = 0.65 + Math.random() * 0.35;
+        starColors[i * 3] = v; starColors[i * 3 + 1] = v; starColors[i * 3 + 2] = v;
+      } else {
+        starColors[i * 3] = 0.776; starColors[i * 3 + 1] = 0.169; starColors[i * 3 + 2] = 0.118;
+      }
     }
-
     starGeo.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
-    starGeo.setAttribute("color",    new THREE.BufferAttribute(starCol, 3));
-    starGeo.setAttribute("size",     new THREE.BufferAttribute(starSz, 1));
+    starGeo.setAttribute("color",    new THREE.BufferAttribute(starColors, 3));
 
-    const starMat = new THREE.ShaderMaterial({
-      uniforms: { time: { value: 0 } },
-      vertexShader: `
-        attribute float size; attribute vec3 color; varying vec3 vColor;
-        uniform float time;
-        void main(){
-          vColor = color;
-          vec3 p = position;
-          float a = time * 0.025;
-          float ca = cos(a), sa = sin(a);
-          p.xz = vec2(p.x * ca - p.z * sa, p.x * sa + p.z * ca);
-          vec4 mv = modelViewMatrix * vec4(p, 1.0);
-          gl_PointSize = size * (260.0 / -mv.z);
-          gl_Position = projectionMatrix * mv;
-        }`,
-      fragmentShader: `
-        varying vec3 vColor;
-        void main(){
-          float d = length(gl_PointCoord - 0.5);
-          if(d > 0.5) discard;
-          gl_FragColor = vec4(vColor, 1.0 - smoothstep(0.0, 0.5, d));
-        }`,
+    const starMat = new THREE.PointsMaterial({
+      size: 1.4,
+      vertexColors: true,
       transparent: true,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
-      vertexColors: true,
+      sizeAttenuation: true,
     });
+    const starField = new THREE.Points(starGeo, starMat);
+    scene.add(starField);
 
-    const stars = new THREE.Points(starGeo, starMat);
-    scene.add(stars);
-
-    // ── Nebula — low-segment plane ─────────────────────────────────────
-    const nebGeo = new THREE.PlaneGeometry(6000, 3000, 32, 32); // reduced from 80×80
-    const nebMat = new THREE.ShaderMaterial({
-      uniforms: {
-        time:    { value: 0 },
-        color1:  { value: new THREE.Color(0xc62b1e) },
-        color2:  { value: new THREE.Color(0x280808) },
-        opacity: { value: 0.18 },
-      },
-      vertexShader: `
-        varying vec2 vUv; uniform float time;
-        void main(){
-          vUv = uv;
-          vec3 p = position;
-          p.z += sin(p.x * 0.008 + time) * cos(p.y * 0.008 + time) * 16.0;
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
-        }`,
-      fragmentShader: `
-        uniform vec3 color1; uniform vec3 color2; uniform float opacity; uniform float time;
-        varying vec2 vUv;
-        void main(){
-          float m = sin(vUv.x * 8.0 + time * 0.3) * cos(vUv.y * 8.0 + time * 0.3);
-          vec3 c = mix(color1, color2, m * 0.5 + 0.5);
-          float a = opacity * (1.0 - length(vUv - 0.5) * 2.0);
-          gl_FragColor = vec4(c, max(a, 0.0));
-        }`,
+    // ── Nebula glow plane ─────────────────────────────────────────────
+    const nebGeo = new THREE.PlaneGeometry(4000, 2000);
+    const nebMat = new THREE.MeshBasicMaterial({
+      color: new THREE.Color(0xc62b1e),
       transparent: true,
-      blending: THREE.AdditiveBlending,
+      opacity: 0.04,
       side: THREE.DoubleSide,
       depthWrite: false,
+      blending: THREE.AdditiveBlending,
     });
     const nebula = new THREE.Mesh(nebGeo, nebMat);
-    nebula.position.z = -700;
+    nebula.position.z = -600;
     scene.add(nebula);
 
-    // ── Mountain silhouettes ───────────────────────────────────────────
+    // ── Mountain silhouettes ──────────────────────────────────────────
     const mountainData = [
       { z: -50,  h: 50,  color: 0x0d0d0d },
       { z: -100, h: 70,  color: 0x111111 },
       { z: -160, h: 90,  color: 0x0e1818 },
-      { z: -210, h: 110, color: 0x0a1010 },
+      { z: -220, h: 108, color: 0x0a1010 },
     ];
     const mountains: THREE.Mesh[] = [];
     for (const { z, h, color } of mountainData) {
       const pts: THREE.Vector2[] = [];
-      const seg = 36; // reduced from 50
+      const seg = 20; // was 32
       for (let i = 0; i <= seg; i++) {
         const x = (i / seg - 0.5) * 900;
         const y = Math.sin(i * 0.15) * h + Math.sin(i * 0.07) * h * 0.5 - 75;
@@ -150,58 +114,60 @@ export function HorizonBg() {
       mountains.push(mesh);
     }
 
-    // ── Atmosphere rim ─────────────────────────────────────────────────
-    const atmGeo = new THREE.SphereGeometry(550, 20, 20); // reduced from 28×28
-    const atmMat = new THREE.ShaderMaterial({
-      uniforms: { time: { value: 0 } },
-      vertexShader: `
-        varying vec3 vN;
-        void main(){ vN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
-      fragmentShader: `
-        varying vec3 vN; uniform float time;
-        void main(){
-          float i = pow(0.65 - dot(vN, vec3(0.0, 0.0, 1.0)), 2.2);
-          vec3 c = vec3(0.78, 0.17, 0.12) * i * (sin(time * 1.8) * 0.06 + 0.94);
-          gl_FragColor = vec4(c, i * 0.18);
-        }`,
+    // ── Red horizon glow sphere ───────────────────────────────────────
+    const glowGeo = new THREE.SphereGeometry(400, 8, 8); // was 16,16
+    const glowMat = new THREE.MeshBasicMaterial({
+      color: new THREE.Color(0xc62b1e),
+      transparent: true,
+      opacity: 0.04,
       side: THREE.BackSide,
       blending: THREE.AdditiveBlending,
-      transparent: true,
+      depthWrite: false,
     });
-    scene.add(new THREE.Mesh(atmGeo, atmMat));
+    scene.add(new THREE.Mesh(glowGeo, glowMat));
 
-    // ── Animate ────────────────────────────────────────────────────────
+    // ── Animation loop — throttled to 30 fps ─────────────────────────
     let raf: number;
-    let prevTime = 0;
+    let lastRender = 0;
+    let visible = true;
+    const TARGET_MS = 1000 / 30; // 30 fps
 
     const animate = (now: number) => {
       raf = requestAnimationFrame(animate);
-      const delta = (now - prevTime) / 1000;
-      prevTime = now;
-      // Guard: skip heavy frames (tab switch, etc.)
-      if (delta > 0.1) return;
+
+      // Skip entirely when tab/section off-screen
+      if (!visible) return;
+
+      // Throttle: skip frames to hit ~30 fps
+      if (now - lastRender < TARGET_MS) return;
+      lastRender = now;
 
       const t = now * 0.001;
 
-      starMat.uniforms.time.value = t;
-      nebMat.uniforms.time.value  = t * 0.35;
-      atmMat.uniforms.time.value  = t;
+      starField.rotation.y = t * 0.015;
+      starField.rotation.x = Math.sin(t * 0.04) * 0.015;
 
-      // Gentle float
-      camera.position.x = Math.sin(t * 0.07) * 1.2;
-      camera.position.y = 22 + Math.cos(t * 0.11) * 0.7;
+      camera.position.x = Math.sin(t * 0.06) * 1.0;
+      camera.position.y = 22 + Math.cos(t * 0.10) * 0.6;
       camera.lookAt(0, 6, -350);
 
       mountains.forEach((m, i) => {
-        m.position.x = Math.sin(t * 0.07) * (0.8 + i * 0.3);
-        m.position.y = m.userData.baseY + Math.cos(t * 0.11) * (0.4 + i * 0.2);
+        m.position.x = Math.sin(t * 0.06) * (0.7 + i * 0.25);
+        m.position.y = (m.userData.baseY as number) + Math.cos(t * 0.10) * (0.25 + i * 0.12);
       });
 
-      renderer.render(scene, camera); // direct render — no bloom overhead
+      renderer.render(scene, camera);
     };
     raf = requestAnimationFrame(animate);
 
-    // ── Resize ─────────────────────────────────────────────────────────
+    // ── Pause when off-screen ─────────────────────────────────────────
+    const observer = new IntersectionObserver(
+      ([entry]) => { visible = entry.isIntersecting; },
+      { threshold: 0 }
+    );
+    observer.observe(canvas);
+
+    // ── Resize ────────────────────────────────────────────────────────
     const onResize = () => {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
@@ -211,14 +177,18 @@ export function HorizonBg() {
     };
     window.addEventListener("resize", onResize, { passive: true });
 
-    // ── Cleanup ────────────────────────────────────────────────────────
+    // ── Cleanup ───────────────────────────────────────────────────────
     return () => {
       cancelAnimationFrame(raf);
+      observer.disconnect();
       window.removeEventListener("resize", onResize);
       starGeo.dispose(); starMat.dispose();
-      nebGeo.dispose();  nebMat.dispose();
-      atmGeo.dispose();  atmMat.dispose();
-      mountains.forEach(m => { m.geometry.dispose(); (m.material as THREE.Material).dispose(); });
+      nebGeo.dispose(); nebMat.dispose();
+      glowGeo.dispose(); glowMat.dispose();
+      mountains.forEach(m => {
+        m.geometry.dispose();
+        (m.material as THREE.Material).dispose();
+      });
       renderer.dispose();
     };
   }, []);

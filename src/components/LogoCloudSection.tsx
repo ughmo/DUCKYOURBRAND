@@ -25,7 +25,7 @@ function LogoItem({ name, sub }: { name: string; sub: string }) {
       >
         {name}
       </span>
-      <span className="text-[#3A3835] text-[9px] font-medium uppercase tracking-[0.3em] mt-1">
+      <span className="text-[#6B6560] text-[9px] font-medium uppercase tracking-[0.3em] mt-1">
         {sub}
       </span>
     </div>

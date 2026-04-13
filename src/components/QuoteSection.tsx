@@ -68,7 +68,7 @@ export function QuoteSection() {
                       <span className="font-black text-[#F7F7F7]">{bold}</span>
                     )}
                     {thin && (
-                      <span className="font-thin text-[#9B9690]">{thin}</span>
+                      <span className="font-thin text-[#A8A49E]">{thin}</span>
                     )}
                   </motion.div>
                 </div>

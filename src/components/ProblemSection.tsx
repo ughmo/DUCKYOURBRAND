@@ -59,7 +59,7 @@ export function ProblemSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.25, ease: EASE }}
-            className="text-[#9B9690] text-lg max-w-xl font-light leading-relaxed"
+            className="text-[#A8A49E] text-lg max-w-xl font-light leading-relaxed"
           >
             Most brands are paying agencies to post content nobody sees. The numbers don't lie.
           </motion.p>
@@ -84,7 +84,7 @@ export function ProblemSection() {
               >
                 {s.number}
               </motion.div>
-              <div className="text-[#9B9690] text-xs font-medium leading-snug">{s.label}</div>
+              <div className="text-[#A8A49E] text-xs font-medium leading-snug">{s.label}</div>
             </motion.div>
           ))}
         </div>
@@ -109,7 +109,7 @@ export function ProblemSection() {
                 5M+ organic views.<br />Zero ad spend.<br />
                 <span className="text-[#C62B1E]">Proven. Repeatable.</span>
               </h3>
-              <p className="text-[#9B9690] font-light leading-relaxed">
+              <p className="text-[#A8A49E] font-light leading-relaxed">
                 No agency in UAE can show organic viral results. DYB can.
                 The market is wide open. The timing is now.
               </p>

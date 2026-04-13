@@ -92,7 +92,7 @@ export default function DubaiPage() {
         <div className="max-w-4xl mx-auto px-6">
 
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#4A4845] uppercase tracking-[0.3em] font-black mb-12">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#6B6560] uppercase tracking-[0.3em] font-black mb-12">
             <Link href="/" className="hover:text-[#C62B1E] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-[#6B6560]">Locations</span>
@@ -110,7 +110,7 @@ export default function DubaiPage() {
               Viral Marketing<br />
               <span className="text-[#C62B1E]">in Dubai.</span>
             </h1>
-            <p className="text-[#9B9690] text-lg font-light max-w-2xl leading-relaxed">
+            <p className="text-[#A8A49E] text-lg font-light max-w-2xl leading-relaxed">
               Dubai has over 1,500 marketing agencies. None of them have a documented, repeatable system for organic virality. DUCKYOURBRAND does. We build attention machines for Dubai brands that turn organic views into real revenue — zero ad spend.
             </p>
           </div>
@@ -120,10 +120,10 @@ export default function DubaiPage() {
             <h2 className="text-2xl md:text-3xl font-black uppercase text-[#F7F7F7] mb-4">
               The Dubai marketing problem.
             </h2>
-            <p className="text-[#9B9690] font-light leading-relaxed mb-4">
+            <p className="text-[#A8A49E] font-light leading-relaxed mb-4">
               Dubai is one of the most competitive social media markets in the world. Brands spend six figures monthly on paid campaigns and influencers — and still see declining organic reach. The average UAE brand reaches less than 1.4% of its own followers organically.
             </p>
-            <p className="text-[#9B9690] font-light leading-relaxed">
+            <p className="text-[#A8A49E] font-light leading-relaxed">
               DYB exists to fix this. We engineer the conditions for content to spread — across TikTok, Instagram Reels, and YouTube Shorts — using platform mechanics, cultural triggers, and psychological frameworks specific to the UAE audience.
             </p>
           </section>
@@ -168,7 +168,7 @@ export default function DubaiPage() {
             >
               Work With Us in Dubai
             </Link>
-            <Link href="/" className="text-[10px] font-black text-[#4A4845] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
+            <Link href="/" className="text-[10px] font-black text-[#6B6560] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
               ← Back to Home
             </Link>
           </div>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { DYBLogo } from "./DYBLogo";
 
-const navLinks = ["System", "Results", "Services", "About"];
+const navLinks = ["System", "Results", "Services", "FAQ"];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,7 +40,7 @@ export function Navbar() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 2.0 + i * 0.07 }}
-                className="relative text-[#9B9690] hover:text-[#F7F7F7] text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 group"
+                className="relative text-[#A8A49E] hover:text-[#F7F7F7] text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 group"
               >
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C62B1E] group-hover:w-full transition-all duration-300" />
@@ -97,7 +97,7 @@ export function Navbar() {
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.06 }}
-                className="text-[#9B9690] text-sm font-bold tracking-[0.2em] uppercase"
+                className="text-[#A8A49E] text-sm font-bold tracking-[0.2em] uppercase"
                 onClick={() => setOpen(false)}
               >
                 {item}

@@ -85,7 +85,7 @@ export default function CairoPage() {
       <main className="min-h-screen bg-[#0D0D0D] text-[#F7F7F7] pt-24 pb-32">
         <div className="max-w-4xl mx-auto px-6">
 
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#4A4845] uppercase tracking-[0.3em] font-black mb-12">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#6B6560] uppercase tracking-[0.3em] font-black mb-12">
             <Link href="/" className="hover:text-[#C62B1E] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-[#6B6560]">Locations</span>
@@ -102,7 +102,7 @@ export default function CairoPage() {
               Viral Marketing<br />
               <span className="text-[#C62B1E]">in Cairo.</span>
             </h1>
-            <p className="text-[#9B9690] text-lg font-light max-w-2xl leading-relaxed">
+            <p className="text-[#A8A49E] text-lg font-light max-w-2xl leading-relaxed">
               DUCKYOURBRAND was built in Cairo. We understand the Egyptian market at a native level — the culture, the platforms, and the psychology that makes content spread. Our founding campaign produced 5M+ organic views for an unknown Egyptian brand. Zero ad spend. One system.
             </p>
           </div>
@@ -111,10 +111,10 @@ export default function CairoPage() {
             <h2 className="text-2xl md:text-3xl font-black uppercase text-[#F7F7F7] mb-4">
               Why Egypt is the biggest opportunity in Arab content.
             </h2>
-            <p className="text-[#9B9690] font-light leading-relaxed mb-4">
+            <p className="text-[#A8A49E] font-light leading-relaxed mb-4">
               Egypt has the largest Arabic-speaking audience on TikTok and Instagram. Egyptian creators dominate Arab social media. But Egyptian brands are almost invisible — most are still paying agencies for content calendars and stock photography while their audience scrolls past.
             </p>
-            <p className="text-[#9B9690] font-light leading-relaxed">
+            <p className="text-[#A8A49E] font-light leading-relaxed">
               DYB builds the virality engine for Egyptian brands that want to be seen, shared, and converted. No paid amplification. No celebrity endorsements. Just engineered content that the algorithm and the audience both want to spread.
             </p>
           </section>
@@ -156,7 +156,7 @@ export default function CairoPage() {
             >
               Work With Us in Cairo
             </Link>
-            <Link href="/" className="text-[10px] font-black text-[#4A4845] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
+            <Link href="/" className="text-[10px] font-black text-[#6B6560] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
               ← Back to Home
             </Link>
           </div>

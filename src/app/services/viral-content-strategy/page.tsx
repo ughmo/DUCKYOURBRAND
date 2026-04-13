@@ -84,7 +84,7 @@ export default function ViralContentStrategyPage() {
       <main className="min-h-screen bg-[#0D0D0D] text-[#F7F7F7] pt-24 pb-32">
         <div className="max-w-4xl mx-auto px-6">
 
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#4A4845] uppercase tracking-[0.3em] font-black mb-12">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#6B6560] uppercase tracking-[0.3em] font-black mb-12">
             <Link href="/" className="hover:text-[#C62B1E] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-[#6B6560]">Services</span>
@@ -101,7 +101,7 @@ export default function ViralContentStrategyPage() {
               Viral Content<br />
               <span className="text-[#C62B1E]">Strategy.</span>
             </h1>
-            <p className="text-[#9B9690] text-lg font-light max-w-2xl leading-relaxed">
+            <p className="text-[#A8A49E] text-lg font-light max-w-2xl leading-relaxed">
               Virality is not luck. It is a repeatable process built on platform mechanics, audience psychology, and relentless iteration. DYB has documented and engineered this process — and we deploy it for your brand.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function ViralContentStrategyPage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 py-3 border-b border-[#1A1A1A]">
                   <span className="w-1.5 h-1.5 bg-[#C62B1E] rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-[#9B9690] text-sm font-light">{item}</span>
+                  <span className="text-[#A8A49E] text-sm font-light">{item}</span>
                 </div>
               ))}
             </div>
@@ -177,7 +177,7 @@ export default function ViralContentStrategyPage() {
             <Link href="/#contact" className="inline-flex items-center gap-2 bg-[#C62B1E] text-[#F7F7F7] text-[10px] font-black px-8 py-4 uppercase tracking-[0.3em] hover:bg-[#a82318] transition-colors duration-200">
               Start Your Virality Sprint
             </Link>
-            <Link href="/" className="text-[10px] font-black text-[#4A4845] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
+            <Link href="/" className="text-[10px] font-black text-[#6B6560] hover:text-[#F7F7F7] uppercase tracking-[0.3em] transition-colors">
               ← Back to Home
             </Link>
           </div>

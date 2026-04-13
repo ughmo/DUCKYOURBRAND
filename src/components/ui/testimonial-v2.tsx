@@ -48,7 +48,7 @@ export const TestimonialsColumn = ({
                 <div className="w-0 group-hover:w-8 h-px bg-[#C62B1E] mb-4 transition-all duration-500" />
 
                 <blockquote className="m-0 p-0">
-                  <p className="text-[#9B9690] text-sm leading-relaxed font-light group-hover:text-[#C8C4BE] transition-colors duration-300">
+                  <p className="text-[#A8A49E] text-sm leading-relaxed font-light group-hover:text-[#C8C4BE] transition-colors duration-300">
                     {text}
                   </p>
                   <footer className="flex items-center gap-3 mt-5 pt-5 border-t border-[#1A1A1A]">

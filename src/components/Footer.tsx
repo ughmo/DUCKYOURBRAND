@@ -40,11 +40,11 @@ export function Footer() {
         />
 
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-[#3A3835] text-[10px] font-medium">
+          <p className="text-[#6B6560] text-[10px] font-medium">
             © 2026 DUCKYOURBRAND. Not for redistribution. Internal use only.
           </p>
           <div className="flex items-center gap-2">
-            <span className="text-[#3A3835] text-[10px] font-black uppercase tracking-[0.3em]">
+            <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.3em]">
               Built on 5M views. Fueled by zero ad spend.
             </span>
             <span className="text-[#C62B1E] font-black text-xs">◆</span>

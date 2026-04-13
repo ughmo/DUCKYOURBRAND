@@ -65,7 +65,7 @@ export function SystemSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-[#9B9690] text-lg max-w-xl font-light"
+            className="text-[#A8A49E] text-lg max-w-xl font-light"
           >
             Not a service list. A machine.
           </motion.p>
@@ -100,7 +100,7 @@ export function SystemSection() {
               <h3 className="text-xl font-black text-[#F7F7F7] uppercase leading-tight mb-4 group-hover:text-[#F7F7F7] transition-colors duration-200">
                 {pillar.title}
               </h3>
-              <p className="text-[#9B9690] font-light leading-relaxed mb-6 text-sm group-hover:text-[#C8C4BE] transition-colors duration-300">
+              <p className="text-[#A8A49E] font-light leading-relaxed mb-6 text-sm group-hover:text-[#C8C4BE] transition-colors duration-300">
                 {pillar.description}
               </p>
               <div className="flex items-center gap-2">

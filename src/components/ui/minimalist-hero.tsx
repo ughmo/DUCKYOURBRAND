@@ -71,7 +71,7 @@ export const MinimalistHero = ({
               <a
                 key={l.label}
                 href={l.href}
-                className="text-[10px] font-black text-[#9B9690] hover:text-[#F7F7F7] uppercase tracking-[0.25em] transition-colors"
+                className="text-[10px] font-black text-[#A8A49E] hover:text-[#F7F7F7] uppercase tracking-[0.25em] transition-colors"
               >
                 {l.label}
               </a>
@@ -94,7 +94,7 @@ export const MinimalistHero = ({
           transition={{ duration: 0.7, delay: d + 0.9, ease: EASE }}
           className="order-2 md:order-1 text-center md:text-left"
         >
-          <p className="text-[#9B9690] text-sm font-light leading-relaxed max-w-[220px] mx-auto md:mx-0">
+          <p className="text-[#A8A49E] text-sm font-light leading-relaxed max-w-[220px] mx-auto md:mx-0">
             {mainText}
           </p>
           <a
@@ -175,7 +175,7 @@ export const MinimalistHero = ({
             {statsBar.map((s, i) => (
               <div key={i} className="flex items-center gap-6">
                 {i > 0 && <span className="w-px h-3 bg-[#3A3835]" />}
-                <span className="text-[10px] font-black text-[#9B9690] uppercase tracking-[0.3em]">
+                <span className="text-[10px] font-black text-[#A8A49E] uppercase tracking-[0.3em]">
                   {s.label}
                 </span>
               </div>

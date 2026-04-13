@@ -73,7 +73,7 @@ export default function OrganicGrowthSystemPage() {
       <main className="min-h-screen bg-[#0D0D0D] text-[#F7F7F7] pt-24 pb-32">
         <div className="max-w-4xl mx-auto px-6">
 
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#4A4845] uppercase tracking-[0.3em] font-black mb-12">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] text-[#6B6560] uppercase tracking-[0.3em] font-black mb-12">
             <Link href="/" className="hover:text-[#C62B1E] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-[#6B6560]">Services</span>
@@ -90,7 +90,7 @@ export default function OrganicGrowthSystemPage() {
               Organic Growth<br />
               <span className="text-[#C62B1E]">System.</span>
             </h1>
-            <p className="text-[#9B9690] text-lg font-light max-w-2xl leading-relaxed">
+            <p className="text-[#A8A49E] text-lg font-light max-w-2xl leading-relaxed">
               Views that do not convert are just vanity. The DYB Organic Growth System is built to turn attention into revenue — through consistent, engineered content that compounds over time.
             </p>
           </div>
@@ -137,7 +137,7 @@ export default function OrganicGrowthSystemPage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 py-3 border-b border-[#1A1A1A]">
                   <span className="w-1.5 h-1.5 bg-[#C62B1E] rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-[#9B9690] text-sm font-light">{item}</span>
+                  <span className="text-[#A8A49E] text-sm font-light">{item}</span>
                 </div>
               ))}
             </div>
@@ -160,7 +160,7 @@ export default function OrganicGrowthSystemPage() {
             <Link href="/#contact" className="inline-flex items-center gap-2 bg-[#C62B1E] text-[#F7F7F7] text-[10px] font-black px-8 py-4 uppercase tracking-[0.3em] hover:bg-[#a82318] transition-colors duration-200">
               Start the Growth System
             </Link>
-            <Link href="/services/viral-content-strategy" className="text-[10px] font-black text-[#4A4845] hover:text-[#C62B1E] uppercase tracking-[0.3em] transition-colors">
+            <Link href="/services/viral-content-strategy" className="text-[10px] font-black text-[#6B6560] hover:text-[#C62B1E] uppercase tracking-[0.3em] transition-colors">
               See Virality Sprint first →
             </Link>
           </div>

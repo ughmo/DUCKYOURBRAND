@@ -15,10 +15,10 @@ const fontSizes = {
 };
 
 const trackings = {
-  sm: "tracking-[0.06em]",
-  md: "tracking-[0.08em]",
-  lg: "tracking-[0.10em]",
-  xl: "tracking-[0.12em]",
+  sm: "tracking-tight",
+  md: "tracking-tight",
+  lg: "tracking-tight",
+  xl: "tracking-tight",
 };
 
 export function DYBLogo({ size = "md", animated = false, className = "" }: DYBLogoProps) {
