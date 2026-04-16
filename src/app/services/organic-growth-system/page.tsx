@@ -2,22 +2,25 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Organic Growth System — Revenue From Organic Reach",
+  title: "Organic Growth System — Social Media Marketing Without Ads | DUCKYOURBRAND",
   description:
-    "DYB's Organic Growth System turns organic views into revenue. A documented, ongoing system for brands in Egypt and UAE that want consistent inbound growth without ad spend.",
+    "DUCKYOURBRAND's Organic Growth System: the UAE's only documented system for turning social media views into revenue — zero ad spend. Dubai, Abu Dhabi & MENA.",
   keywords: [
     "organic growth system UAE",
-    "organic reach Egypt",
-    "social media growth without ads",
-    "organic marketing system",
-    "TikTok organic growth",
+    "social media marketing without ads Dubai",
+    "organic social media marketing UAE",
+    "TikTok organic growth Dubai",
     "Instagram organic reach UAE",
     "content that converts UAE",
+    "social media growth Dubai",
+    "organic marketing system UAE",
+    "DUCKYOURBRAND",
+    "Duck Your Brand",
   ],
   alternates: { canonical: "https://duckyourbrand.com/services/organic-growth-system" },
   openGraph: {
-    title: "Organic Growth System | DUCKYOURBRAND",
-    description: "Organic reach to revenue. Documented. No paid ads. Egypt & UAE.",
+    title: "Organic Growth System | DUCKYOURBRAND UAE",
+    description: "UAE's only documented system for organic social media growth. Zero ad spend. Views into revenue.",
     url: "https://duckyourbrand.com/services/organic-growth-system",
   },
 };

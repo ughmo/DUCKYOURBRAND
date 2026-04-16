@@ -2,24 +2,33 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Viral Marketing Agency in Dubai, UAE",
+  title: "Marketing Agency in Dubai, UAE — DUCKYOURBRAND",
   description:
-    "DUCKYOURBRAND is Dubai's only viral marketing agency with a proven, repeatable system for organic reach. We build attention machines that turn views into revenue — no paid ads.",
+    "DUCKYOURBRAND is Dubai's viral marketing agency. 5M+ organic views, zero ad spend. We build attention machines that turn views into revenue. Best results-based marketing agency in UAE.",
   keywords: [
+    "marketing agency Dubai",
+    "marketing agency UAE",
+    "best marketing agency Dubai",
     "viral marketing agency Dubai",
-    "organic content marketing Dubai",
-    "social media agency UAE",
-    "TikTok marketing Dubai",
-    "Instagram growth Dubai",
-    "content virality UAE",
+    "social media marketing agency Dubai",
+    "digital marketing agency Dubai",
+    "TikTok marketing agency Dubai",
+    "Instagram marketing Dubai",
+    "content marketing agency UAE",
+    "organic marketing Dubai",
+    "DUCKYOURBRAND Dubai",
+    "Duck Your Brand Dubai",
+    "top marketing agency UAE",
+    "advertising agency Dubai",
+    "marketing companies in Dubai",
   ],
   alternates: {
     canonical: "https://duckyourbrand.com/locations/dubai",
   },
   openGraph: {
-    title: "Viral Marketing Agency in Dubai, UAE | DUCKYOURBRAND",
+    title: "Marketing Agency in Dubai, UAE | DUCKYOURBRAND",
     description:
-      "Dubai's only viral marketing agency with a documented, repeatable virality system. 5M+ organic views. Zero ad spend.",
+      "Dubai's viral marketing agency. 5M+ organic views, zero ad spend. The only UAE agency with a proven, repeatable virality system.",
     url: "https://duckyourbrand.com/locations/dubai",
   },
 };
@@ -107,18 +116,18 @@ export default function DubaiPage() {
               <span className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.45em]">Dubai · UAE</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black uppercase leading-none tracking-tighter mb-6">
-              Viral Marketing<br />
+              Marketing Agency<br />
               <span className="text-[#C62B1E]">in Dubai.</span>
             </h1>
             <p className="text-[#A8A49E] text-lg font-light max-w-2xl leading-relaxed">
-              Dubai has over 1,500 marketing agencies. None of them have a documented, repeatable system for organic virality. DUCKYOURBRAND does. We build attention machines for Dubai brands that turn organic views into real revenue — zero ad spend.
+              Dubai has over 1,500 marketing agencies. None of them have a documented, repeatable system for organic virality. DUCKYOURBRAND does. We are the UAE&apos;s only viral marketing agency with proven results — 5M+ organic views, zero ad spend. We build attention machines for Dubai brands that turn views into real revenue.
             </p>
           </div>
 
           {/* Why Dubai needs this */}
           <section className="mb-16 border-l-2 border-[#C62B1E]/30 pl-8">
             <h2 className="text-2xl md:text-3xl font-black uppercase text-[#F7F7F7] mb-4">
-              The Dubai marketing problem.
+              Why most Dubai marketing agencies fail you.
             </h2>
             <p className="text-[#A8A49E] font-light leading-relaxed mb-4">
               Dubai is one of the most competitive social media markets in the world. Brands spend six figures monthly on paid campaigns and influencers — and still see declining organic reach. The average UAE brand reaches less than 1.4% of its own followers organically.

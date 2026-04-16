@@ -2,20 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Viral Marketing Agency in Abu Dhabi, UAE",
+  title: "Marketing Agency in Abu Dhabi, UAE — DUCKYOURBRAND",
   description:
-    "DUCKYOURBRAND serves Abu Dhabi brands with proven organic virality systems. No paid ads. Engineered reach. Turning views into revenue for UAE businesses.",
+    "DUCKYOURBRAND — Abu Dhabi's viral marketing agency. Organic content systems that turn views into revenue. Zero ad spend. Proven results across UAE.",
   keywords: [
+    "marketing agency Abu Dhabi",
+    "marketing agency UAE",
     "viral marketing agency Abu Dhabi",
-    "organic marketing Abu Dhabi",
     "social media agency Abu Dhabi",
-    "content marketing UAE capital",
-    "TikTok agency Abu Dhabi",
+    "digital marketing Abu Dhabi",
+    "TikTok marketing Abu Dhabi",
+    "Instagram marketing Abu Dhabi",
+    "content marketing Abu Dhabi",
+    "organic marketing UAE",
+    "best marketing agency Abu Dhabi",
+    "DUCKYOURBRAND Abu Dhabi",
   ],
   alternates: { canonical: "https://duckyourbrand.com/locations/abu-dhabi" },
   openGraph: {
-    title: "Viral Marketing Agency in Abu Dhabi, UAE | DUCKYOURBRAND",
-    description: "Proven organic virality for Abu Dhabi brands. Zero ad spend. Measurable revenue.",
+    title: "Marketing Agency in Abu Dhabi, UAE | DUCKYOURBRAND",
+    description: "Abu Dhabi's viral marketing agency. Organic content systems, zero ad spend, proven UAE results.",
     url: "https://duckyourbrand.com/locations/abu-dhabi",
   },
 };
@@ -85,8 +91,8 @@ export default function AbuDhabiPage() {
               <span className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.45em]">Abu Dhabi · UAE</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black uppercase leading-none tracking-tighter mb-6">
-              Viral Marketing<br />
-              <span className="text-[#C62B1E]">in Abu Dhabi.</span>
+              Marketing Agency<br />
+              <span className="text-[#C62B1E]">Abu Dhabi.</span>
             </h1>
             <p className="text-[#A8A49E] text-lg font-light max-w-2xl leading-relaxed">
               Abu Dhabi brands operate in one of the world&apos;s most premium, trust-driven markets. DUCKYOURBRAND builds organic virality systems calibrated to Abu Dhabi audience behavior — not generic templates, not paid boosts. Content that earns attention by being worth sharing.
