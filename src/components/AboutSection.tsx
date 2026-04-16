@@ -15,7 +15,7 @@ type StoryLine = {
 const STORY: StoryLine[] = [
   { text: "A misfit gray duck",                    color: "#A8A49E", size: "clamp(0.95rem, 1.6vw, 1.8rem)",  weight: "300", mt: "0"    },
   { text: "wished he was a yellow duck.",           color: "#F7F7F7", size: "clamp(1.4rem, 2.6vw, 3rem)",    weight: "900", mt: "3px"  },
-  { text: "So he wore one on his cap and clothes",   color: "#6B6560", size: "clamp(0.8rem, 1.1vw, 1.25rem)", weight: "300", mt: "18px" },
+  { text: "So he wore one on his cap and clothes",  color: "#6B6560", size: "clamp(0.8rem, 1.1vw, 1.25rem)", weight: "300", mt: "18px" },
   { text: "to fit in.",                             color: "#A8A49E", size: "clamp(0.9rem, 1.4vw, 1.6rem)",  weight: "400", mt: "2px"  },
   { text: "It worked.",                             color: "#F7F7F7", size: "clamp(1.8rem, 3.5vw, 4.5rem)",  weight: "900", mt: "18px" },
   { text: "He looked like everyone else.",          color: "#6B6560", size: "clamp(0.8rem, 1.1vw, 1.25rem)", weight: "300", mt: "3px"  },
@@ -28,22 +28,27 @@ const STORY: StoryLine[] = [
 export function AboutSection() {
   return (
     <section id="about" style={{ background: "#0D0D0D", borderTop: "1px solid #111", overflow: "hidden" }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "4rem 2rem" }}>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1.3fr 1fr",
-          gap: "3rem",
-          alignItems: "center",
-        }}>
+      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "4rem 1.5rem" }}>
 
-          {/* LEFT — mascot. NO opacity animation on ancestor of blend-mode element = no flash */}
-          <div style={{ lineHeight: 0, backgroundColor: "#0D0D0D", position: "relative" }}>
+        {/*
+          Responsive grid:
+          - Mobile (<768px):  single column, mascot centered above story
+          - Tablet (768px+):  2 columns, mascot left, story right
+          Uses Tailwind for breakpoints, inline style only where Tailwind can't reach
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-10 md:gap-12 items-center">
+
+          {/* MASCOT — full width centered on mobile, left column on desktop */}
+          <div
+            className="flex justify-center md:block"
+            style={{ backgroundColor: "#0D0D0D", lineHeight: 0 }}
+          >
             <img
               src="/mascot-suit.png"
               alt="DYB mascot"
               draggable={false}
+              className="w-[72vw] max-w-[340px] md:w-full md:max-w-none"
               style={{
-                width: "100%",
                 height: "auto",
                 display: "block",
                 userSelect: "none",
@@ -53,7 +58,7 @@ export function AboutSection() {
             />
           </div>
 
-          {/* RIGHT — story */}
+          {/* STORY */}
           <div>
             {/* Label */}
             <motion.div
@@ -76,7 +81,7 @@ export function AboutSection() {
               </span>
             </motion.div>
 
-            {/* Story lines — staggered fade up */}
+            {/* Story lines */}
             {STORY.map(({ text, color, size, weight, italic, mt }, i) => (
               <motion.p
                 key={i}

@@ -19,9 +19,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/mascot.png", type: "image/png" },
+      { url: "/mascot.png", type: "image/png", sizes: "any" },
+      { url: "/mascot.png", type: "image/png", sizes: "512x512" },
+      { url: "/mascot.png", type: "image/png", sizes: "192x192" },
+      { url: "/mascot.png", type: "image/png", sizes: "32x32" },
+      { url: "/mascot.png", type: "image/png", sizes: "16x16" },
     ],
-    apple: "/mascot.png",
+    apple: [
+      { url: "/mascot.png", sizes: "180x180", type: "image/png" },
+    ],
     shortcut: "/mascot.png",
   },
   description:
