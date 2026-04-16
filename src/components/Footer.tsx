@@ -15,7 +15,7 @@ export function Footer() {
           >
             <DYBLogo size="md" />
             <p className="text-[#6B6560] text-xs font-medium mt-3 tracking-wider">
-              Attention is engineered, not earned.
+              If it&apos;s comfortable, you&apos;re doing something wrong.
             </p>
           </motion.div>
 
@@ -26,7 +26,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex flex-col gap-1 md:text-right"
           >
-            <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.3em]">Egypt · UAE</span>
+            <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.3em]">UAE · Egypt · MENA</span>
             <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.3em]">Markets 2026</span>
           </motion.div>
         </div>
@@ -41,14 +41,8 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-[#6B6560] text-[10px] font-medium">
-            © 2026 DUCKYOURBRAND. Not for redistribution. Internal use only.
+            © 2026 DUCKYOURBRAND.
           </p>
-          <div className="flex items-center gap-2">
-            <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.3em]">
-              Built on 5M views. Fueled by zero ad spend.
-            </span>
-            <span className="text-[#C62B1E] font-black text-xs">◆</span>
-          </div>
         </div>
       </div>
     </footer>

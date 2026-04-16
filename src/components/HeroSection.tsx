@@ -10,33 +10,19 @@ export function HeroSection() {
       aria-label="Hero"
       className="relative h-screen overflow-hidden bg-[#0D0D0D]"
     >
-      {/* GIF — watermark, 8% opacity */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: "url('/ezgif-43d7510c8c092116.gif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          opacity: 0.08,
-        }}
+      {/* GIF — img tag loops cleaner than CSS background */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/ezgif-43d7510c8c092116.gif"
+        alt=""
         aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{ opacity: 0.12 }}
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[#0D0D0D]/60 pointer-events-none" />
       {/* Bottom fade */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent pointer-events-none" />
-      {/* Subtle glow behind mascot zone */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          right: 0,
-          bottom: 0,
-          width: "55vw",
-          height: "90vh",
-          background: "radial-gradient(ellipse 70% 80% at 80% 90%, rgba(255,255,255,0.04) 0%, transparent 65%)",
-        }}
-      />
 
       {/* LEFT ZONE — copy */}
       <div className="relative z-10 h-full flex flex-col justify-center px-8 sm:px-14 md:px-20 lg:px-24 pt-20 pb-16 max-w-[60%] min-w-[320px]">
@@ -50,7 +36,7 @@ export function HeroSection() {
         >
           <span className="w-5 h-px bg-[#C62B1E]" />
           <span className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.42em]">
-            Viral Marketing · Egypt & UAE
+            Viral Marketing · UAE & MENA
           </span>
         </motion.div>
 
@@ -129,7 +115,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 2.7, ease: E }}
           className="text-[#3A3835] text-[10px] font-bold uppercase tracking-[0.25em]"
         >
-          5M+ views · 115% growth · Egypt & UAE
+          5M+ views · 115% growth · UAE & MENA
         </motion.p>
       </div>
 
@@ -142,7 +128,7 @@ export function HeroSection() {
         className="absolute bottom-5 left-8 sm:left-14 md:left-20 lg:left-24 right-8"
       >
         <div className="flex items-center gap-1 text-[9px] font-black text-[#2A2A2A] uppercase tracking-[0.35em]">
-          Egypt · UAE · MENA · 2026
+          UAE · MENA · 2026
         </div>
       </motion.div>
     </section>

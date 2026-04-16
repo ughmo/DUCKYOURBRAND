@@ -14,24 +14,26 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://duckyourbrand.com"),
   title: {
-    default: "DUCKYOURBRAND — Viral Marketing Agency in Egypt & UAE",
+    default: "DUCKYOURBRAND — Viral Marketing Agency in UAE & MENA",
     template: "%s | DUCKYOURBRAND",
   },
   description:
-    "We build attention and money making machines, turning views into revenue. The only agency in the Arab world that engineers organic virality as a proven, repeatable system. Egypt & UAE.",
+    "The UAE's most disruptive viral marketing agency. We build attention machines that turn organic views into revenue — zero ad spend. Dubai, Abu Dhabi & MENA.",
   keywords: [
+    "DUCKYOURBRAND",
+    "Duck Your Brand",
+    "DYB agency",
     "viral marketing agency UAE",
-    "viral marketing Egypt",
-    "organic virality agency",
+    "viral marketing Dubai",
     "social media marketing Dubai",
     "content marketing UAE",
-    "brand growth agency Egypt",
-    "viral content strategy",
+    "organic virality agency",
+    "brand growth agency UAE",
+    "viral content strategy Dubai",
     "organic reach agency Dubai",
-    "DUCKYOURBRAND",
-    "DYB agency",
-    "viral marketing Cairo",
-    "organic views agency",
+    "viral marketing MENA",
+    "marketing agency Dubai",
+    "best marketing agency UAE",
   ],
   authors: [{ name: "DUCKYOURBRAND", url: "https://duckyourbrand.com" }],
   creator: "DUCKYOURBRAND",
@@ -49,16 +51,25 @@ export const metadata: Metadata = {
     url: "https://duckyourbrand.com",
     locale: "en_AE",
     siteName: "DUCKYOURBRAND",
-    title: "DUCKYOURBRAND — Viral Marketing Agency in Egypt & UAE",
+    title: "DUCKYOURBRAND — Viral Marketing Agency in UAE & MENA",
     description:
-      "We build attention and money making machines, turning views into revenue. Proven viral systems, zero ad spend.",
+      "The UAE's most disruptive viral marketing agency. Attention machines, zero ad spend, proven results.",
+    images: [
+      {
+        url: "https://duckyourbrand.com/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "DUCKYOURBRAND — Viral Marketing Agency UAE",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@duckyourbrand",
     creator: "@duckyourbrand",
     title: "DUCKYOURBRAND — Viral Marketing Agency",
-    description: "We build attention and money making machines, turning views into revenue.",
+    description: "The UAE's most disruptive viral marketing agency. 5M+ organic views. Zero ad spend.",
+    images: ["https://duckyourbrand.com/opengraph-image"],
   },
 };
 
@@ -78,24 +89,24 @@ const organizationSchema = {
   alternateName: "DYB",
   url: "https://duckyourbrand.com",
   description:
-    "Viral marketing agency in Egypt and UAE. We build attention and money making machines, turning organic views into revenue.",
+    "UAE-first viral marketing agency. We build attention machines turning organic views into revenue — Dubai, Abu Dhabi & MENA.",
   foundingDate: "2024",
   areaServed: [
-    { "@type": "Country", name: "Egypt" },
     { "@type": "Country", name: "United Arab Emirates" },
     { "@type": "Country", name: "Saudi Arabia" },
+    { "@type": "Country", name: "Egypt" },
     { "@type": "AdministrativeArea", name: "MENA" },
   ],
   address: [
     {
       "@type": "PostalAddress",
-      addressLocality: "Cairo",
-      addressCountry: "EG",
+      addressLocality: "Dubai",
+      addressCountry: "AE",
     },
     {
       "@type": "PostalAddress",
-      addressLocality: "Dubai",
-      addressCountry: "AE",
+      addressLocality: "Cairo",
+      addressCountry: "EG",
     },
   ],
   priceRange: "AED 4,000–55,000/month",
@@ -205,10 +216,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is DUCKYOURBRAND based in Egypt or UAE?",
+      name: "Is DUCKYOURBRAND based in the UAE?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Both. Our founding team is Egyptian, with active operations in Dubai and Cairo. We deliver remotely across the full MENA region.",
+        text: "Yes. We operate primarily out of Dubai, UAE, with roots in Cairo. We deliver across the full MENA region remotely.",
       },
     },
     {

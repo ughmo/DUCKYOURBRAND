@@ -21,13 +21,14 @@ export const TestimonialsColumn = ({
   return (
     <div className={className}>
       <motion.ul
-        animate={{ translateY: "-50%" }}
+        animate={{ y: "-50%" }}
         transition={{
           duration,
           repeat: Infinity,
           ease: "linear",
           repeatType: "loop",
         }}
+        style={{ willChange: "transform" }}
         className="flex flex-col gap-5 pb-5 list-none m-0 p-0"
       >
         {[...Array(2)].map((_, dupIdx) => (

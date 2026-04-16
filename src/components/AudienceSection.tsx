@@ -48,10 +48,10 @@ export function AudienceSection() {
 
         <div className="grid md:grid-cols-2 gap-px bg-[#E8E5DF]">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="bg-[#F7F7F7] p-8 md:p-12"
           >
             <div className="text-[10px] text-[#6B6560] font-black uppercase tracking-[0.4em] mb-6">Profile</div>
@@ -76,10 +76,10 @@ export function AudienceSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="bg-[#0D0D0D] p-8 md:p-12"
           >
             <div className="text-[10px] text-[#C62B1E] font-black uppercase tracking-[0.4em] mb-6">What They Feel</div>
@@ -87,10 +87,10 @@ export function AudienceSection() {
               {feelings.map((feeling, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.4, delay: 0.1 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
                   className="flex gap-4"
                 >
                   <span className="text-[#C62B1E] font-black text-sm mt-0.5 flex-shrink-0">→</span>

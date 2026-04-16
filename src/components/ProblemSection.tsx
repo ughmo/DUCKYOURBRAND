@@ -56,9 +56,9 @@ export function ProblemSection() {
           </div>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.25, ease: EASE }}
+            transition={{ duration: 0.55, delay: 0.2, ease: EASE }}
             className="text-[#A8A49E] text-lg max-w-xl font-light leading-relaxed"
           >
             Most brands are paying agencies to post content nobody sees. The numbers don't lie.
@@ -69,10 +69,10 @@ export function ProblemSection() {
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: i * 0.08, ease: EASE }}
               className="bg-[#0D0D0D] p-6 md:p-8 group hover:bg-[#1A1A1A] transition-colors duration-300"
             >
               <motion.div
@@ -90,16 +90,18 @@ export function ProblemSection() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: EASE }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="border border-[#C62B1E]/20 bg-[#1A1A1A] p-8 md:p-12 relative overflow-hidden"
         >
+          {/* opacity-only pulse — no scale so no repaint */}
           <motion.div
             className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(198,43,30,0.06),transparent_70%)]"
-            animate={{ scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5] }}
+            animate={{ opacity: [0.4, 0.9, 0.4] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            style={{ willChange: "opacity" }}
           />
 
           <div className="relative grid md:grid-cols-2 gap-12 items-center">

@@ -16,10 +16,10 @@ export function QuoteSection() {
 
         {/* Dot-pattern bordered quote card */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, ease: EASE }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="relative border border-[#C62B1E]/50"
         >
           {/* Dot pattern fill */}

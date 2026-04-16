@@ -37,10 +37,10 @@ export function LogoCloudSection() {
     <section className="py-20 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: EASE }}
+          transition={{ duration: 0.5, ease: EASE }}
           className="text-center"
         >
           <p className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.5em] mb-3">

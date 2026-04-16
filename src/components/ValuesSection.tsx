@@ -48,10 +48,10 @@ export function ValuesSection() {
             </div>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.25 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-[#A8A49E] font-light leading-relaxed mb-10"
             >
               These aren't company values on a wall. They are the operating system of every campaign, every post, every result.
@@ -88,10 +88,10 @@ export function ValuesSection() {
             {values.map((value, i) => (
               <motion.div
                 key={value.number}
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 14 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.45, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
                 className="group bg-[#0D0D0D] border-b border-[#1A1A1A] p-6 flex gap-6 hover:bg-[#1A1A1A] transition-all duration-300 cursor-default"
               >
                 <motion.span

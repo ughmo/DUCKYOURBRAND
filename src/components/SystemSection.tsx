@@ -61,10 +61,10 @@ export function SystemSection() {
           </div>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.25 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-[#A8A49E] text-lg max-w-xl font-light"
           >
             Not a service list. A machine.
@@ -76,10 +76,10 @@ export function SystemSection() {
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.number}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="relative bg-[#0D0D0D] p-8 md:p-10 overflow-hidden group cursor-default"
             >
               <Spotlight size={280} />

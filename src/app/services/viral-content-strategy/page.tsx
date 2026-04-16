@@ -4,14 +4,16 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Viral Content Strategy — Organic Virality System",
   description:
-    "DUCKYOURBRAND's Viral Content Strategy service engineers organic reach as a repeatable system. TikTok, Instagram Reels, YouTube Shorts. Egypt & UAE. No paid ads.",
+    "DUCKYOURBRAND's Viral Content Strategy engineers organic reach as a repeatable system. UAE & MENA. TikTok, Instagram Reels, YouTube Shorts. No paid ads.",
   keywords: [
-    "viral content strategy",
-    "organic virality service",
+    "viral content strategy UAE",
+    "organic virality service Dubai",
     "TikTok viral strategy UAE",
-    "Instagram Reels strategy Egypt",
-    "content that goes viral",
-    "how to go viral on TikTok UAE",
+    "Instagram Reels strategy Dubai",
+    "content that goes viral UAE",
+    "how to go viral on TikTok Dubai",
+    "DUCKYOURBRAND",
+    "Duck Your Brand",
   ],
   alternates: { canonical: "https://duckyourbrand.com/services/viral-content-strategy" },
   openGraph: {

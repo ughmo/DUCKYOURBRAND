@@ -4,7 +4,7 @@ const items = [
   "5M+ Organic Views",
   "Zero Ad Spend",
   "Proven System",
-  "Egypt → UAE",
+  "UAE · MENA",
   "Attention Engineered",
   "Offensive Marketing",
   "Repeatable Virality",

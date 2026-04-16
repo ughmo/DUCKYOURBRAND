@@ -5,8 +5,8 @@ import { ArrowRight } from "lucide-react";
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const MENA = [
-  { code: "EG", flag: "🇪🇬", name: "Egypt" },
   { code: "AE", flag: "🇦🇪", name: "UAE" },
+  { code: "EG", flag: "🇪🇬", name: "Egypt" },
   { code: "SA", flag: "🇸🇦", name: "Saudi Arabia" },
   { code: "KW", flag: "🇰🇼", name: "Kuwait" },
   { code: "BH", flag: "🇧🇭", name: "Bahrain" },
@@ -35,10 +35,10 @@ export function ContactSection() {
           {/* Left — copy */}
           <div>
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -12 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, ease: EASE }}
+              transition={{ duration: 0.45, ease: EASE }}
               className="flex items-center gap-3 mb-6"
             >
               <motion.span
@@ -99,10 +99,10 @@ export function ContactSection() {
 
           {/* Right — form */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
+            transition={{ duration: 0.55, delay: 0.1, ease: EASE }}
             className="bg-[#1A1A1A] border border-[#3A3835] p-8 md:p-10 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-16 h-px bg-[#C62B1E]" />
@@ -172,10 +172,10 @@ export function ContactSection() {
 
         {/* ── MENA Region Strip ── */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2, ease: EASE }}
+          transition={{ duration: 0.5, delay: 0.15, ease: EASE }}
           className="mt-20 pt-12 border-t border-[#1A1A1A]"
         >
           <div className="flex items-center gap-3 mb-5">
@@ -186,7 +186,7 @@ export function ContactSection() {
           </div>
 
           <p className="text-[#6B6560] text-sm font-light mb-8 max-w-lg">
-            Built in Egypt. Operating across the Arab world. One system — engineered for every MENA market.
+            UAE-first. Engineered for the Arab world. One system — built to dominate every MENA market.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-px bg-[#1A1A1A]">

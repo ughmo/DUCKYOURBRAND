@@ -71,13 +71,7 @@ export function TestimonialsSection() {
       aria-labelledby="testimonials-heading"
       className="py-24 md:py-36 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.9, ease: EASE }}
-        className="max-w-7xl mx-auto px-6"
-      >
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-16 max-w-xl">
           <motion.div
@@ -152,7 +146,7 @@ export function TestimonialsSection() {
             <span className="w-8 h-px bg-current group-hover:w-12 transition-all duration-300" />
           </a>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -63,10 +63,10 @@ export function ServicesSection() {
           </div>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.25 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-[#A8A49E] text-lg max-w-xl font-light"
           >
             Four things. Each one tied to a specific result. None of them are content calendars.
@@ -77,10 +77,10 @@ export function ServicesSection() {
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.65, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
               className="relative bg-[#0D0D0D] p-8 md:p-10 group overflow-hidden"
             >
               <Spotlight size={220} />
