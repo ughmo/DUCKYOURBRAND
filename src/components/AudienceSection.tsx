@@ -11,7 +11,7 @@ const feelings = [
 
 export function AudienceSection() {
   return (
-    <section className="py-32 bg-[#F7F7F7] border-t border-[#E8E5DF] overflow-hidden">
+    <section className="py-32 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="mb-16">
@@ -38,7 +38,7 @@ export function AudienceSection() {
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-4xl md:text-6xl font-black text-[#0D0D0D] uppercase leading-tight"
+              className="text-4xl md:text-6xl font-black text-[#F7F7F7] uppercase leading-tight"
             >
               Built for founders<br />
               <span className="text-[#C62B1E]">ready to own their market.</span>
@@ -46,16 +46,16 @@ export function AudienceSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-px bg-[#E8E5DF]">
+        <div className="grid md:grid-cols-2 gap-px bg-[#1A1A1A]">
           <motion.div
             initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-[#F7F7F7] p-8 md:p-12"
+            className="bg-[#1A1A1A] p-8 md:p-12"
           >
             <div className="text-[10px] text-[#6B6560] font-black uppercase tracking-[0.4em] mb-6">Profile</div>
-            <p className="text-[#0D0D0D] font-bold text-lg mb-8 leading-snug">
+            <p className="text-[#F7F7F7] font-bold text-lg mb-8 leading-snug">
               UAE founders, 28–50. Real budget. Done posting into the void.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -66,8 +66,8 @@ export function AudienceSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.06 }}
-                  whileHover={{ backgroundColor: "#0D0D0D", color: "#F7F7F7" }}
-                  className="border border-[#0D0D0D] text-[#0D0D0D] text-[10px] font-black uppercase tracking-[0.15em] px-3 py-1.5 transition-colors duration-200 cursor-default"
+                  whileHover={{ backgroundColor: "#F5C518", color: "#0D0D0D" }}
+                  className="border border-[#3A3835] text-[#C8C4BE] text-[10px] font-black uppercase tracking-[0.15em] px-3 py-1.5 transition-colors duration-200 cursor-default"
                 >
                   {industry}
                 </motion.span>

@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 const CUTS = [
   { bg: "#C62B1E", text: "#F7F7F7", word: "DUCK" },
-  { bg: "#F7F7F7", text: "#0D0D0D", word: "YOUR" },
-  { bg: "#0D0D0D", text: "#F7F7F7", word: "BRAND" },
+  { bg: "#0D0D0D", text: "#F5C518", word: "YOUR" },
+  { bg: "#F5C518", text: "#0D0D0D", word: "BRAND" },
 ];
 
 export function PageLoader() {
@@ -71,7 +71,7 @@ export function PageLoader() {
             {phase === "hold" && (
               <motion.div
                 key="hold"
-                className="absolute inset-0 bg-[#0D0D0D] flex flex-col items-center justify-center gap-6"
+                className="absolute inset-0 bg-[#F5C518] flex flex-col items-center justify-center gap-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.2 }}
@@ -80,7 +80,7 @@ export function PageLoader() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.05 }}
-                  className="font-black text-[#F7F7F7] uppercase leading-none tracking-tighter select-none"
+                  className="font-black text-[#6B6560] uppercase leading-none tracking-tighter select-none"
                   style={{
                     fontFamily: "'Poppins', sans-serif",
                     fontSize: "clamp(1.4rem, 4vw, 3rem)",
@@ -89,7 +89,7 @@ export function PageLoader() {
                   DUCKYOURBRAND
                 </motion.span>
 
-                <div className="w-36 h-px bg-[#1A1A1A] overflow-hidden">
+                <div className="w-36 h-px bg-black/15 overflow-hidden">
                   <motion.div
                     className="h-full bg-[#C62B1E]"
                     initial={{ width: "0%" }}

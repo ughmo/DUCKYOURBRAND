@@ -43,16 +43,16 @@ export const TestimonialsColumn = ({
                   y: -6,
                   transition: { type: "spring", stiffness: 400, damping: 17 },
                 }}
-                className="p-7 border border-[#1A1A1A] hover:border-[#C62B1E]/40 bg-[#0D0D0D] max-w-xs w-full cursor-default select-none group transition-colors duration-300 focus:outline-none"
+                className="p-7 border border-black/10 hover:border-[#C62B1E]/40 bg-black/5 max-w-xs w-full cursor-default select-none group transition-colors duration-300 focus:outline-none"
               >
                 {/* Red accent top bar on hover */}
                 <div className="w-0 group-hover:w-8 h-px bg-[#C62B1E] mb-4 transition-all duration-500" />
 
                 <blockquote className="m-0 p-0">
-                  <p className="text-[#A8A49E] text-sm leading-relaxed font-light group-hover:text-[#C8C4BE] transition-colors duration-300">
+                  <p className="text-[#3A3835] text-sm leading-relaxed font-light group-hover:text-[#0D0D0D] transition-colors duration-300">
                     {text}
                   </p>
-                  <footer className="flex items-center gap-3 mt-5 pt-5 border-t border-[#1A1A1A]">
+                  <footer className="flex items-center gap-3 mt-5 pt-5 border-t border-black/10">
                     <img
                       width={36}
                       height={36}
@@ -61,7 +61,7 @@ export const TestimonialsColumn = ({
                       className="h-9 w-9 rounded-full object-cover ring-1 ring-[#3A3835] group-hover:ring-[#C62B1E]/40 transition-all duration-300"
                     />
                     <div className="flex flex-col">
-                      <cite className="font-black not-italic text-xs text-[#F7F7F7] uppercase tracking-[0.1em]">
+                      <cite className="font-black not-italic text-xs text-[#0D0D0D] uppercase tracking-[0.1em]">
                         {name}
                       </cite>
                       <span className="text-[11px] text-[#6B6560] mt-0.5 font-medium">

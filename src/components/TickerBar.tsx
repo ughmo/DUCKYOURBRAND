@@ -6,7 +6,7 @@ const items = [
   "Proven System",
   "UAE · MENA",
   "Attention Engineered",
-  "Offensive Marketing",
+  "Disruptive Marketing",
   "Repeatable Virality",
   "The Outlaw Agency",
   "No Filler. Only Firepower.",

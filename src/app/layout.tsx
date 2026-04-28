@@ -282,7 +282,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#0D0D0D] text-[#F7F7F7]">
+      <body className="min-h-full flex flex-col bg-[#F5C518] text-[#0D0D0D]">
         <PageLoader />
         <SmoothScroll />
         {children}

@@ -11,7 +11,7 @@ const values = [
 
 export function ValuesSection() {
   return (
-    <section className="py-32 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
+    <section className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
@@ -40,7 +40,7 @@ export function ValuesSection() {
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-4xl md:text-5xl font-black text-[#F7F7F7] uppercase leading-tight"
+                className="text-4xl md:text-5xl font-black text-[#0D0D0D] uppercase leading-tight"
               >
                 What we stand for.<br />
                 <span className="text-[#C62B1E]">No exceptions.</span>
@@ -52,7 +52,7 @@ export function ValuesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-[#A8A49E] font-light leading-relaxed mb-10"
+              className="text-[#3A3835] font-light leading-relaxed mb-10"
             >
               These aren't company values on a wall. They are the operating system of every campaign, every post, every result.
             </motion.p>
@@ -75,8 +75,8 @@ export function ValuesSection() {
               />
               <div className="relative">
                 <div className="text-[10px] text-[#C62B1E] font-black uppercase tracking-[0.4em] mb-2">Brand Archetype</div>
-                <div className="text-2xl font-black text-[#F7F7F7] uppercase mb-2">The Outlaw</div>
-                <p className="text-[#A8A49E] text-sm font-light">
+                <div className="text-2xl font-black text-[#0D0D0D] uppercase mb-2">The Outlaw</div>
+                <p className="text-[#3A3835] text-sm font-light">
                   "The safe choice costs more than you think."
                 </p>
               </div>
@@ -92,18 +92,18 @@ export function ValuesSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.45, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-                className="group bg-[#0D0D0D] border-b border-[#1A1A1A] p-6 flex gap-6 hover:bg-[#1A1A1A] transition-all duration-300 cursor-default"
+                className="group bg-black/5 border-b border-black/10 p-6 flex gap-6 hover:bg-black/10 transition-all duration-300 cursor-default"
               >
                 <motion.span
-                  className="text-[#6B6560] font-black text-sm mt-0.5 flex-shrink-0 group-hover:text-[#C62B1E] transition-colors duration-300"
+                  className="text-[#3A3835] font-black text-sm mt-0.5 flex-shrink-0 group-hover:text-[#C62B1E] transition-colors duration-300"
                 >
                   {value.number}
                 </motion.span>
                 <div>
-                  <h3 className="font-black text-[#F7F7F7] uppercase tracking-wide mb-2 text-sm group-hover:text-[#F7F7F7] transition-colors">
+                  <h3 className="font-black text-[#0D0D0D] uppercase tracking-wide mb-2 text-sm transition-colors">
                     {value.title}
                   </h3>
-                  <p className="text-[#6B6560] text-sm font-light leading-relaxed group-hover:text-[#A8A49E] transition-colors duration-300">
+                  <p className="text-[#3A3835] text-sm font-light leading-relaxed group-hover:text-[#0D0D0D] transition-colors duration-300">
                     {value.description}
                   </p>
                 </div>

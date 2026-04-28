@@ -24,7 +24,7 @@ export function ProblemSection() {
   const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="results" className="py-32 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
+    <section id="results" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         <div ref={headerRef} className="mb-16">
@@ -48,10 +48,10 @@ export function ProblemSection() {
               initial={{ y: "100%" }}
               animate={headerInView ? { y: 0 } : {}}
               transition={{ duration: 0.75, delay: 0.1, ease: EASE }}
-              className="text-4xl md:text-6xl font-black text-[#F7F7F7] uppercase leading-tight mb-4"
+              className="text-4xl md:text-6xl font-black text-[#0D0D0D] uppercase leading-tight mb-4"
             >
-              Your content is <br />
-              <span className="text-[#C62B1E]">invisible.</span>
+              Is your content<br />
+              <span className="text-[#C62B1E]">invisible?</span>
             </motion.h2>
           </div>
 
@@ -59,13 +59,13 @@ export function ProblemSection() {
             initial={{ opacity: 0, y: 12 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.2, ease: EASE }}
-            className="text-[#A8A49E] text-lg max-w-xl font-light leading-relaxed"
+            className="text-[#3A3835] text-lg max-w-xl font-light leading-relaxed"
           >
-            Most brands are paying agencies to post content nobody sees. The numbers don't lie.
+            Most brands are paying agencies to post content nobody sees. The numbers don&apos;t lie.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#1A1A1A] mb-px">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-black/15 mb-px">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -73,18 +73,18 @@ export function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: EASE }}
-              className="bg-[#0D0D0D] p-6 md:p-8 group hover:bg-[#1A1A1A] transition-colors duration-300"
+              className="bg-black/5 p-6 md:p-8 group hover:bg-black/10 transition-colors duration-300"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1, type: "spring", stiffness: 200 }}
-                className="text-4xl md:text-5xl font-black text-[#C62B1E] leading-none mb-2"
+                className="text-4xl md:text-5xl font-black text-[#C62B1E] leading-none mb-2 drop-shadow-sm"
               >
                 {s.number}
               </motion.div>
-              <div className="text-[#A8A49E] text-xs font-medium leading-snug">{s.label}</div>
+              <div className="text-[#3A3835] text-xs font-medium leading-snug">{s.label}</div>
             </motion.div>
           ))}
         </div>
@@ -94,7 +94,7 @@ export function ProblemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: EASE }}
-          className="border border-[#C62B1E]/20 bg-[#1A1A1A] p-8 md:p-12 relative overflow-hidden"
+          className="border border-[#C62B1E]/30 bg-black/8 p-8 md:p-12 relative overflow-hidden"
         >
           {/* opacity-only pulse — no scale so no repaint */}
           <motion.div
@@ -107,11 +107,11 @@ export function ProblemSection() {
           <div className="relative grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.4em] mb-4">The Gap DYB Fills</div>
-              <h3 className="text-3xl md:text-4xl font-black text-[#F7F7F7] uppercase leading-tight mb-4">
+              <h3 className="text-3xl md:text-4xl font-black text-[#0D0D0D] uppercase leading-tight mb-4">
                 5M+ organic views.<br />Zero ad spend.<br />
                 <span className="text-[#C62B1E]">Proven. Repeatable.</span>
               </h3>
-              <p className="text-[#A8A49E] font-light leading-relaxed">
+              <p className="text-[#3A3835] font-light leading-relaxed">
                 No agency in UAE can show organic viral results. DYB can.
                 The market is wide open. The timing is now.
               </p>
@@ -133,7 +133,7 @@ export function ProblemSection() {
                     transition={{ duration: 0.3, delay: 0.15 + i * 0.09, type: "spring" }}
                     className="w-1.5 h-1.5 bg-[#C62B1E] rounded-full flex-shrink-0"
                   />
-                  <span className="text-[#C8C4BE] font-medium">{line}</span>
+                  <span className="text-[#0D0D0D] font-medium">{line}</span>
                 </motion.div>
               ))}
             </div>

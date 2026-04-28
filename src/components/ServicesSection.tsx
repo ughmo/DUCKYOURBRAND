@@ -1,33 +1,47 @@
 "use client";
 import { motion } from "framer-motion";
-import { Spotlight } from "./ui/spotlight";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 const services = [
   {
-    title: "Viral Campaign Engineering",
-    description: "We identify psychological triggers, build the hook, and execute the campaign. Not hope. Engineering.",
-    tags: ["Psychology", "Hook Building", "Execution"],
+    id: "01",
+    eyebrow: "Start Here",
+    title: "Viral Diagnostic™",
+    price: "AED 997",
+    tag: "One-Time",
+    q: "Want to know if your brand can actually go viral?",
+    description: "We go deep into your brand, your audience, and your market. You leave with a clear roadmap — what to post, where, and why it will spread. Mo does this personally. Not a junior. Not a template.",
+    deliverable: "Full virality roadmap + content blueprint",
+    cta: "Book Your Diagnostic →",
   },
   {
-    title: "Offensive Content Strategy",
-    description: "Content that provokes. Content that spreads. Content that makes your competitor's followers find you.",
-    tags: ["Strategy", "Provocation", "Spread"],
+    id: "02",
+    eyebrow: "The Proof",
+    title: "The Campaign",
+    price: "AED 10,000",
+    tag: "100K Views Guaranteed",
+    q: "Ready to see what 100,000 organic views looks like for your brand?",
+    description: "21 days. One campaign. 100,000 organic views — or we rebuild for free. This is the same system that drove 2M+ views for Gloss Boss Car Wash with AED 0 in ad spend. Engineered. Not hoped for.",
+    deliverable: "Campaign strategy + content execution + results",
+    cta: "Claim Your Campaign →",
   },
   {
-    title: "Repeatable Content System",
-    description: "We install a system inside your brand that produces viral content monthly. One viral hit is luck. A system is DYB.",
-    tags: ["System", "Monthly", "Scalable"],
-  },
-  {
-    title: "Make The Founder Unavoidable",
-    description: "The founder is the product. We make you the one name everyone in your market knows — whether they want to or not.",
-    tags: ["Personal Brand", "Authority", "Visibility"],
+    id: "03",
+    eyebrow: "The Machine",
+    title: "Attention Machine™",
+    price: "AED 15,000–30,000 / month",
+    tag: "Ongoing Retainer",
+    q: "Want your brand to be the one everyone talks about — every single month?",
+    description: "We install a repeatable content system inside your brand. Monthly viral campaigns, founder brand building, and a pipeline of inbound leads — all organic. The companies that own attention own their market.",
+    deliverable: "Monthly campaigns + founder content + lead pipeline",
+    cta: "Build Your Machine →",
   },
 ];
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-32 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
+    <section id="services" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -54,11 +68,11 @@ export function ServicesSection() {
               initial={{ y: "100%" }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-4xl md:text-6xl font-black text-[#F7F7F7] uppercase leading-tight mb-4"
+              transition={{ duration: 0.75, delay: 0.1, ease: EASE }}
+              className="text-4xl md:text-6xl font-black uppercase leading-tight mb-4"
             >
-              We don't manage<br />
-              <span className="text-[#C62B1E]">social media.</span>
+              <span className="text-[#6B6560]">We don&apos;t manage</span><br />
+              <span className="text-[#0D0D0D]">social media.</span>
             </motion.h2>
           </div>
 
@@ -67,24 +81,24 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#A8A49E] text-lg max-w-xl font-light"
+            className="text-[#3A3835] text-lg max-w-xl font-light"
           >
-            Four things. Each one tied to a specific result. None of them are content calendars.
+            Three offers. Each with a clear outcome. Pick the one that matches where you are.
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-px bg-[#1A1A1A]">
-          {services.map((service, i) => (
+        {/* Service cards */}
+        <div className="grid md:grid-cols-3 gap-px bg-black/15">
+          {services.map((s, i) => (
             <motion.div
-              key={service.title}
+              key={s.id}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.5, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
-              className="relative bg-[#0D0D0D] p-8 md:p-10 group overflow-hidden"
+              transition={{ duration: 0.5, delay: i * 0.1, ease: EASE }}
+              className="relative bg-black/5 p-8 md:p-10 flex flex-col group hover:bg-black/10 transition-colors duration-300"
             >
-              <Spotlight size={220} />
-
+              {/* Bottom red rule */}
               <motion.div
                 className="absolute bottom-0 left-0 h-px bg-[#C62B1E] origin-left"
                 initial={{ scaleX: 0 }}
@@ -93,27 +107,61 @@ export function ServicesSection() {
                 transition={{ duration: 0.8, delay: 0.3 + i * 0.12 }}
               />
 
-              <div className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.4em] mb-4">0{i + 1}</div>
-              <h3 className="text-xl font-black text-[#F7F7F7] uppercase mb-4 leading-tight group-hover:text-[#F7F7F7]">
-                {service.title}
-              </h3>
-              <p className="text-[#6B6560] font-light text-sm leading-relaxed mb-6 group-hover:text-[#A8A49E] transition-colors duration-300">
-                {service.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {service.tags.map((tag) => (
-                  <motion.span
-                    key={tag}
-                    whileHover={{ borderColor: "#C62B1E", color: "#F7F7F7" }}
-                    className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.2em] border border-[#3A3835] px-2.5 py-1 transition-colors duration-200 cursor-default"
-                  >
-                    {tag}
-                  </motion.span>
-                ))}
+              {/* Eyebrow + number */}
+              <div className="flex items-center justify-between mb-5">
+                <span className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.4em]">{s.eyebrow}</span>
+                <span className="text-black/20 text-4xl font-black leading-none">{s.id}</span>
               </div>
+
+              {/* Title */}
+              <h3 className="text-2xl font-black text-[#0D0D0D] uppercase mb-1 leading-tight">
+                {s.title}
+              </h3>
+
+              {/* Price + tag */}
+              <div className="flex items-baseline gap-3 mb-5">
+                <span className="text-[#C62B1E] font-black text-lg">{s.price}</span>
+                <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.2em] border border-[#6B6560]/30 px-2 py-0.5">{s.tag}</span>
+              </div>
+
+              {/* Conversational question */}
+              <p className="text-[#0D0D0D] font-bold text-sm leading-snug mb-4 italic">
+                {s.q}
+              </p>
+
+              {/* Description */}
+              <p className="text-[#3A3835] font-light text-sm leading-relaxed mb-6 flex-1">
+                {s.description}
+              </p>
+
+              {/* Deliverable */}
+              <div className="flex items-center gap-2 mb-6">
+                <span className="w-4 h-px bg-[#C62B1E]" />
+                <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.2em]">{s.deliverable}</span>
+              </div>
+
+              {/* CTA */}
+              <a
+                href="#contact"
+                className="text-[#C62B1E] text-[11px] font-black uppercase tracking-[0.25em] hover:text-[#0D0D0D] transition-colors duration-200 group-hover:translate-x-1 inline-block transition-transform"
+              >
+                {s.cta}
+              </a>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom trust line */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="text-[#6B6560] text-xs font-medium mt-10 text-center uppercase tracking-[0.3em]"
+        >
+          Not sure where to start? The Viral Diagnostic™ is always the right first step.
+        </motion.p>
+
       </div>
     </section>
   );

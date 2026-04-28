@@ -26,7 +26,7 @@ const requirements = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-32 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
+    <section id="contact" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ── Main contact grid ── */}
@@ -57,7 +57,7 @@ export function ContactSection() {
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.75, delay: 0.1, ease: EASE }}
-                className="text-4xl md:text-6xl font-black text-[#F7F7F7] uppercase leading-tight"
+                className="text-4xl md:text-6xl font-black text-[#0D0D0D] uppercase leading-tight"
               >
                 Ready to own<br />
                 <span className="text-[#C62B1E]">your market?</span>
@@ -69,7 +69,7 @@ export function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.25, ease: EASE }}
-              className="text-[#A8A49E] font-light leading-relaxed mb-8 max-w-md"
+              className="text-[#3A3835] font-light leading-relaxed mb-8 max-w-md"
             >
               We don&apos;t work with everyone. We work with founders who want results more than they want approval.
             </motion.p>
@@ -91,7 +91,7 @@ export function ContactSection() {
                     transition={{ duration: 0.3, delay: 0.35 + i * 0.08, type: "spring" }}
                     className="w-1.5 h-1.5 bg-[#C62B1E] rounded-full flex-shrink-0"
                   />
-                  <span className="text-[#C8C4BE] text-sm font-medium">{item}</span>
+                  <span className="text-[#0D0D0D] text-sm font-medium">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -103,7 +103,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1, ease: EASE }}
-            className="bg-[#1A1A1A] border border-[#3A3835] p-8 md:p-10 relative overflow-hidden"
+            className="bg-[#0D0D0D] border border-[#1A1A1A] p-8 md:p-10 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-16 h-px bg-[#C62B1E]" />
             <div className="absolute top-0 right-0 w-px h-16 bg-[#C62B1E]" />
@@ -176,7 +176,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15, ease: EASE }}
-          className="mt-20 pt-12 border-t border-[#1A1A1A]"
+          className="mt-20 pt-12 border-t border-black/10"
         >
           <div className="flex items-center gap-3 mb-5">
             <span className="w-8 h-px bg-[#C62B1E]" aria-hidden="true" />
@@ -185,11 +185,11 @@ export function ContactSection() {
             </span>
           </div>
 
-          <p className="text-[#6B6560] text-sm font-light mb-8 max-w-lg">
+          <p className="text-[#3A3835] text-sm font-light mb-8 max-w-lg">
             UAE-first. Engineered for the Arab world. One system — built to dominate every MENA market.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-px bg-[#1A1A1A]">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-px bg-black/10">
             {MENA.map(({ flag, name }, i) => (
               <motion.div
                 key={name}
@@ -197,10 +197,10 @@ export function ContactSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05, duration: 0.35 }}
-                className="bg-[#0D0D0D] px-5 py-4 flex items-center gap-3 group hover:bg-[#111] transition-colors duration-200"
+                className="bg-black/5 px-5 py-4 flex items-center gap-3 group hover:bg-black/10 transition-colors duration-200"
               >
                 <span className="text-lg leading-none select-none" aria-hidden="true">{flag}</span>
-                <span className="text-[#6B6560] group-hover:text-[#A8A49E] text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-200">
+                <span className="text-[#3A3835] group-hover:text-[#0D0D0D] text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-200">
                   {name}
                 </span>
               </motion.div>

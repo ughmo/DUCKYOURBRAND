@@ -5,7 +5,7 @@ import { Spotlight } from "./ui/spotlight";
 const pillars = [
   {
     number: "01",
-    title: "Offensive Marketing Psychology",
+    title: "Disruptive Marketing Psychology",
     description: "We use human psychology to make content that spreads. Discomfort is the trigger. Safe content is invisible.",
     detail: "Psychology-first content engineering",
   },
@@ -25,7 +25,7 @@ const pillars = [
 
 export function SystemSection() {
   return (
-    <section id="system" className="py-32 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
+    <section id="system" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -53,7 +53,7 @@ export function SystemSection() {
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-4xl md:text-6xl font-black text-[#F7F7F7] uppercase leading-tight mb-4"
+              className="text-4xl md:text-6xl font-black text-[#0D0D0D] uppercase leading-tight mb-4"
             >
               Three things no <br />
               <span className="text-[#C62B1E]">competitor combines.</span>
@@ -65,14 +65,14 @@ export function SystemSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#A8A49E] text-lg max-w-xl font-light"
+            className="text-[#3A3835] text-lg max-w-xl font-light"
           >
             Not a service list. A machine.
           </motion.p>
         </div>
 
         {/* Pillars */}
-        <div className="grid md:grid-cols-3 gap-px bg-[#1A1A1A]">
+        <div className="grid md:grid-cols-3 gap-px bg-black/15">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.number}
@@ -80,7 +80,7 @@ export function SystemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="relative bg-[#0D0D0D] p-8 md:p-10 overflow-hidden group cursor-default"
+              className="relative bg-black/5 p-8 md:p-10 overflow-hidden group cursor-default"
             >
               <Spotlight size={280} />
 
@@ -92,15 +92,15 @@ export function SystemSection() {
               <motion.div
                 initial={{ opacity: 0.15 }}
                 whileHover={{ opacity: 0.4 }}
-                className="text-[#F7F7F7] text-8xl font-black leading-none mb-6 select-none transition-opacity duration-300"
+                className="text-black/10 text-8xl font-black leading-none mb-6 select-none transition-opacity duration-300"
               >
                 {pillar.number}
               </motion.div>
 
-              <h3 className="text-xl font-black text-[#F7F7F7] uppercase leading-tight mb-4 group-hover:text-[#F7F7F7] transition-colors duration-200">
+              <h3 className="text-xl font-black text-[#0D0D0D] uppercase leading-tight mb-4 transition-colors duration-200">
                 {pillar.title}
               </h3>
-              <p className="text-[#A8A49E] font-light leading-relaxed mb-6 text-sm group-hover:text-[#C8C4BE] transition-colors duration-300">
+              <p className="text-[#3A3835] font-light leading-relaxed mb-6 text-sm group-hover:text-[#0D0D0D] transition-colors duration-300">
                 {pillar.description}
               </p>
               <div className="flex items-center gap-2">

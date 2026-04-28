@@ -11,7 +11,7 @@ export function QuoteSection() {
   const bgX = useTransform(scrollYProgress, [0, 1], ["-4%", "4%"]);
 
   return (
-    <section ref={ref} className="py-20 md:py-32 bg-[#0D0D0D] border-t border-[#1A1A1A] overflow-hidden">
+    <section ref={ref} className="py-20 md:py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Dot-pattern bordered quote card */}
@@ -65,10 +65,10 @@ export function QuoteSection() {
                     className="flex flex-wrap gap-x-3 gap-y-1 items-baseline"
                   >
                     {bold && (
-                      <span className="font-black text-[#F7F7F7]">{bold}</span>
+                      <span className="font-black text-[#0D0D0D]">{bold}</span>
                     )}
                     {thin && (
-                      <span className="font-thin text-[#A8A49E]">{thin}</span>
+                      <span className="font-thin text-[#6B6560]">{thin}</span>
                     )}
                   </motion.div>
                 </div>
@@ -87,6 +87,7 @@ export function QuoteSection() {
               <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.5em]">
                 DUCKYOURBRAND
               </span>
+
             </motion.div>
           </div>
 
