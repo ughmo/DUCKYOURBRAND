@@ -24,7 +24,7 @@ const trackings = {
 export function DYBLogo({ size = "md", animated = false, className = "" }: DYBLogoProps) {
   const content = (
     <span
-      className={`font-black uppercase leading-none select-none text-[#6B6560] ${fontSizes[size]} ${trackings[size]} ${className}`}
+      className={`font-black uppercase leading-none select-none text-[#0D0D0D] ${fontSizes[size]} ${trackings[size]} ${className}`}
       style={{ fontFamily: "'Poppins', sans-serif" }}
     >
       DUCKYOURBRAND

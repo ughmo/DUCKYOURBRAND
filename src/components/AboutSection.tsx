@@ -52,7 +52,6 @@ export function AboutSection() {
                 height: "auto",
                 display: "block",
                 userSelect: "none",
-                mixBlendMode: "lighten",
                 willChange: "transform",
               }}
             />
@@ -130,7 +129,7 @@ export function AboutSection() {
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: "clamp(1.4rem, 3.5vw, 5rem)",
                 fontWeight: 900,
-                color: "#6B6560",
+                color: "#0D0D0D",
                 textTransform: "uppercase",
                 letterSpacing: "-0.03em",
                 lineHeight: 1,

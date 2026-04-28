@@ -10,20 +10,24 @@ export function HeroSection() {
       aria-label="Hero"
       className="relative h-screen overflow-hidden bg-[#F5C518]"
     >
-      {/* GIF — reduced opacity on yellow */}
+      {/* Subtle noise/texture — multiply on yellow = dark grain only */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/ezgif-43d7510c8c092116.gif"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{ opacity: 0.06, mixBlendMode: "multiply" }}
+        style={{ opacity: 0.04, mixBlendMode: "multiply" }}
       />
+
+      {/* Top shadow — blends the black nav into the yellow hero */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
+
       {/* Bottom fade to yellow */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#F5C518] via-transparent to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#F5C518] to-transparent pointer-events-none" />
 
       {/* LEFT ZONE — copy */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-8 sm:px-14 md:px-20 lg:px-24 pt-20 pb-16 max-w-[65%] min-w-[320px]">
+      <div className="relative z-10 h-full flex flex-col justify-center px-8 sm:px-14 md:px-20 lg:px-24 pt-24 pb-16 max-w-[65%] min-w-[320px]">
 
         {/* Label */}
         <motion.div
@@ -60,7 +64,7 @@ export function HeroSection() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 0.7, delay: 2.26, ease: E }}
-            className="font-black text-[#3A3835] leading-tight"
+            className="font-black text-[#0D0D0D]/60 leading-tight"
             style={{
               fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(1.1rem, 2.2vw, 2.6rem)",
@@ -70,12 +74,12 @@ export function HeroSection() {
           </motion.p>
         </div>
 
-        {/* Question CTA line */}
+        {/* Italic question */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.44, ease: E }}
-          className="text-[#6B6560] italic mb-10"
+          className="text-[#0D0D0D]/50 italic mb-10"
           style={{
             fontFamily: "'Poppins', sans-serif",
             fontSize: "clamp(0.85rem, 1.1vw, 1.15rem)",
@@ -93,14 +97,14 @@ export function HeroSection() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2.5 bg-[#C62B1E] text-[#F7F7F7] text-[11px] font-black px-8 py-4 uppercase tracking-[0.28em] hover:bg-[#a82318] active:scale-95 transition-all duration-200 group"
+            className="inline-flex items-center gap-2.5 bg-[#0D0D0D] text-[#F5C518] text-[11px] font-black px-8 py-4 uppercase tracking-[0.28em] hover:bg-[#C62B1E] hover:text-[#F7F7F7] active:scale-95 transition-all duration-200 group"
           >
             Duck the Norm
             <ArrowRight size={11} className="group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#results"
-            className="text-[11px] font-black text-[#3A3835] hover:text-[#0D0D0D] uppercase tracking-[0.28em] transition-colors duration-200"
+            className="text-[11px] font-black text-[#0D0D0D]/50 hover:text-[#0D0D0D] uppercase tracking-[0.28em] transition-colors duration-200"
           >
             See what we&apos;ve done →
           </a>
@@ -111,7 +115,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 2.7, ease: E }}
-          className="text-[#6B6560] text-[10px] font-bold uppercase tracking-[0.25em]"
+          className="text-[#0D0D0D]/35 text-[10px] font-bold uppercase tracking-[0.25em]"
         >
           5M+ views · 115% growth · UAE & MENA
         </motion.p>
@@ -124,7 +128,7 @@ export function HeroSection() {
         transition={{ delay: 2.85, duration: 0.5 }}
         className="absolute bottom-5 left-8 sm:left-14 md:left-20 lg:left-24 right-8"
       >
-        <div className="flex items-center gap-1 text-[9px] font-black text-black/20 uppercase tracking-[0.35em]">
+        <div className="flex items-center gap-1 text-[9px] font-black text-[#0D0D0D]/25 uppercase tracking-[0.35em]">
           UAE · MENA · 2026
         </div>
       </motion.div>

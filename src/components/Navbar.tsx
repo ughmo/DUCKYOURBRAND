@@ -24,12 +24,21 @@ export function Navbar() {
         transition={{ duration: 0.7, delay: 1.9, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#F5C518]/95 backdrop-blur-xl border-b border-black/10"
-            : "bg-transparent"
+            ? "bg-[#0D0D0D]/95 backdrop-blur-xl border-b border-[#1A1A1A]"
+            : "bg-[#0D0D0D]"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <DYBLogo size="sm" animated />
+          {/* Logo white in black bar */}
+          <motion.span
+            initial={{ opacity: 0, x: -12 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="font-black uppercase leading-none select-none text-[#F5C518] text-base"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            DUCKYOURBRAND
+          </motion.span>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
@@ -40,7 +49,7 @@ export function Navbar() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 2.0 + i * 0.07 }}
-                className="relative text-[#3A3835] hover:text-[#0D0D0D] text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 group"
+                className="relative text-[#9B9690] hover:text-[#F7F7F7] text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 group"
               >
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C62B1E] group-hover:w-full transition-all duration-300" />
@@ -61,7 +70,7 @@ export function Navbar() {
           </motion.a>
 
           <button
-            className="md:hidden text-[#0D0D0D]"
+            className="md:hidden text-[#F7F7F7]"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -88,7 +97,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed top-[68px] left-0 right-0 z-40 bg-[#F5C518]/98 backdrop-blur-xl border-b border-black/10 px-6 py-6 flex flex-col gap-5 md:hidden"
+            className="fixed top-[68px] left-0 right-0 z-40 bg-[#0D0D0D]/97 backdrop-blur-xl border-b border-[#1A1A1A] px-6 py-6 flex flex-col gap-5 md:hidden"
           >
             {navLinks.map((item, i) => (
               <motion.a
@@ -97,7 +106,7 @@ export function Navbar() {
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.06 }}
-                className="text-[#3A3835] text-sm font-bold tracking-[0.2em] uppercase"
+                className="text-[#A8A49E] text-sm font-bold tracking-[0.2em] uppercase"
                 onClick={() => setOpen(false)}
               >
                 {item}
