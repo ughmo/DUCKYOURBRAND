@@ -10,14 +10,14 @@ export function HeroSection() {
       aria-label="Hero"
       className="relative h-screen overflow-hidden bg-[#F5C518]"
     >
-      {/* Subtle noise/texture — multiply on yellow = dark grain only */}
+      {/* Very faint texture — barely perceptible depth on yellow */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/ezgif-43d7510c8c092116.gif"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{ opacity: 0.04, mixBlendMode: "multiply" }}
+        style={{ opacity: 0.018, mixBlendMode: "multiply" }}
       />
 
       {/* Radial depth — lighter centre fading to slightly richer yellow at edges */}

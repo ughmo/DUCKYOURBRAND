@@ -80,7 +80,7 @@ export function SystemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="relative bg-black/5 p-8 md:p-10 overflow-hidden group cursor-default"
+              className="relative bg-[#EDB80D] p-8 md:p-10 overflow-hidden group cursor-default hover:bg-[#E8B20A] transition-colors duration-300"
             >
               <Spotlight size={280} />
 

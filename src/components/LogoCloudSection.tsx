@@ -18,7 +18,7 @@ const logos = [
 
 function LogoItem({ name, sub }: { name: string; sub: string }) {
   return (
-    <div className="flex flex-col items-center justify-center px-8 py-4 border border-[#C4A010]/40 bg-black/5 hover:border-[#C62B1E]/40 transition-colors duration-300 min-w-[140px]">
+    <div className="flex flex-col items-center justify-center px-8 py-4 border border-[#C4A010]/50 bg-[#EDB80D] hover:border-[#C62B1E]/50 transition-colors duration-300 min-w-[140px]">
       <span
         className="text-[#0D0D0D] font-black text-sm uppercase tracking-[0.15em] leading-none whitespace-nowrap"
         style={{ fontFamily: "'Poppins', sans-serif" }}

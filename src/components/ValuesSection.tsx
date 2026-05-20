@@ -92,7 +92,7 @@ export function ValuesSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.45, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-                className="group bg-black/5 border-b border-[#C4A010]/35 p-6 flex gap-6 hover:bg-black/10 transition-all duration-300 cursor-default"
+                className="group bg-[#EDB80D] border-b border-[#C4A010]/50 p-6 flex gap-6 hover:bg-[#E8B20A] transition-all duration-300 cursor-default"
               >
                 <motion.span
                   className="text-[#6B5820] font-black text-sm mt-0.5 flex-shrink-0 group-hover:text-[#C62B1E] transition-colors duration-300"

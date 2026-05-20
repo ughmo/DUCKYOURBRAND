@@ -43,7 +43,7 @@ export const TestimonialsColumn = ({
                   y: -6,
                   transition: { type: "spring", stiffness: 400, damping: 17 },
                 }}
-                className="p-7 border border-[#C4A010]/35 hover:border-[#C62B1E]/40 bg-black/5 max-w-xs w-full cursor-default select-none group transition-colors duration-300 focus:outline-none"
+                className="p-7 border border-[#C4A010]/50 hover:border-[#C62B1E]/50 bg-[#EDB80D] max-w-xs w-full cursor-default select-none group transition-colors duration-300 focus:outline-none"
               >
                 {/* Red accent top bar on hover */}
                 <div className="w-0 group-hover:w-8 h-px bg-[#C62B1E] mb-4 transition-all duration-500" />

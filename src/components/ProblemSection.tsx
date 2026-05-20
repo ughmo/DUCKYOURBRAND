@@ -73,7 +73,7 @@ export function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: EASE }}
-              className="bg-black/5 p-6 md:p-8 group hover:bg-black/10 transition-colors duration-300"
+              className="bg-[#EDB80D] p-6 md:p-8 group hover:bg-[#E8B20A] transition-colors duration-300"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
