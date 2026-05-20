@@ -5,6 +5,7 @@ interface DYBLogoProps {
   size?: "sm" | "md" | "lg" | "xl";
   animated?: boolean;
   className?: string;
+  color?: string;
 }
 
 const fontSizes = {
@@ -21,11 +22,11 @@ const trackings = {
   xl: "tracking-tight",
 };
 
-export function DYBLogo({ size = "md", animated = false, className = "" }: DYBLogoProps) {
+export function DYBLogo({ size = "md", animated = false, className = "", color = "#0D0D0D" }: DYBLogoProps) {
   const content = (
     <span
-      className={`font-black uppercase leading-none select-none text-[#0D0D0D] ${fontSizes[size]} ${trackings[size]} ${className}`}
-      style={{ fontFamily: "'Poppins', sans-serif" }}
+      className={`font-black uppercase leading-none select-none ${fontSizes[size]} ${trackings[size]} ${className}`}
+      style={{ fontFamily: "'Poppins', sans-serif", color }}
     >
       DUCKYOURBRAND
     </span>

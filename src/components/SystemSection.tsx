@@ -25,7 +25,7 @@ const pillars = [
 
 export function SystemSection() {
   return (
-    <section id="system" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
+    <section id="system" className="py-32 bg-[#F5C518] border-t border-[#C4A010]/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -65,14 +65,14 @@ export function SystemSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#3A3835] text-lg max-w-xl font-light"
+            className="text-[#2C2100] text-lg max-w-xl font-light"
           >
             Not a service list. A machine.
           </motion.p>
         </div>
 
         {/* Pillars */}
-        <div className="grid md:grid-cols-3 gap-px bg-black/15">
+        <div className="grid md:grid-cols-3 gap-px bg-[#C4A010]/40">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.number}
@@ -92,7 +92,7 @@ export function SystemSection() {
               <motion.div
                 initial={{ opacity: 0.15 }}
                 whileHover={{ opacity: 0.4 }}
-                className="text-black/10 text-8xl font-black leading-none mb-6 select-none transition-opacity duration-300"
+                className="text-[#C4A010]/25 text-8xl font-black leading-none mb-6 select-none transition-opacity duration-300"
               >
                 {pillar.number}
               </motion.div>
@@ -100,7 +100,7 @@ export function SystemSection() {
               <h3 className="text-xl font-black text-[#0D0D0D] uppercase leading-tight mb-4 transition-colors duration-200">
                 {pillar.title}
               </h3>
-              <p className="text-[#3A3835] font-light leading-relaxed mb-6 text-sm group-hover:text-[#0D0D0D] transition-colors duration-300">
+              <p className="text-[#2C2100] font-light leading-relaxed mb-6 text-sm group-hover:text-[#0D0D0D] transition-colors duration-300">
                 {pillar.description}
               </p>
               <div className="flex items-center gap-2">

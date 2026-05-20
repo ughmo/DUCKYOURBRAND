@@ -47,7 +47,7 @@ export function FAQSection() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="py-24 md:py-36 bg-[#F5C518] border-t border-black/10"
+      className="py-24 md:py-36 bg-[#F5C518] border-t border-[#C4A010]/40"
     >
       <div className="max-w-4xl mx-auto px-6">
 
@@ -91,18 +91,18 @@ export function FAQSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04, duration: 0.4, ease: EASE }}
-                className={`border-b transition-colors duration-200 ${isOpen ? "border-[#C62B1E]/35" : "border-black/10"}`}
+                className={`border-b transition-colors duration-200 ${isOpen ? "border-[#C62B1E]/35" : "border-[#C4A010]/35"}`}
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
                   className="w-full flex items-start justify-between gap-6 py-5 text-left group"
                 >
-                  <span className={`text-sm md:text-base font-medium leading-snug transition-colors duration-200 ${isOpen ? "text-[#0D0D0D]" : "text-[#3A3835] group-hover:text-[#0D0D0D]"}`}>
+                  <span className={`text-sm md:text-base font-medium leading-snug transition-colors duration-200 ${isOpen ? "text-[#0D0D0D]" : "text-[#2C2100] group-hover:text-[#0D0D0D]"}`}>
                     {q}
                   </span>
                   <span
-                    className={`mt-0.5 flex-shrink-0 w-4 h-4 flex items-center justify-center transition-transform duration-300 ${isOpen ? "rotate-45 text-[#C62B1E]" : "text-[#6B6560]"}`}
+                    className={`mt-0.5 flex-shrink-0 w-4 h-4 flex items-center justify-center transition-transform duration-300 ${isOpen ? "rotate-45 text-[#C62B1E]" : "text-[#6B5820]"}`}
                     aria-hidden="true"
                   >
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -121,7 +121,7 @@ export function FAQSection() {
                       transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-5 text-[#3A3835] text-sm font-light leading-relaxed max-w-2xl">{a}</p>
+                      <p className="pb-5 text-[#2C2100] text-sm font-light leading-relaxed max-w-2xl">{a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

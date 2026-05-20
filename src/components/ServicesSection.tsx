@@ -41,7 +41,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
+    <section id="services" className="py-32 bg-[#F5C518] border-t border-[#C4A010]/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -71,7 +71,7 @@ export function ServicesSection() {
               transition={{ duration: 0.75, delay: 0.1, ease: EASE }}
               className="text-4xl md:text-6xl font-black uppercase leading-tight mb-4"
             >
-              <span className="text-[#6B6560]">We don&apos;t manage</span><br />
+              <span className="text-[#6B5820]">We don&apos;t manage</span><br />
               <span className="text-[#0D0D0D]">social media.</span>
             </motion.h2>
           </div>
@@ -81,14 +81,14 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#3A3835] text-lg max-w-xl font-light"
+            className="text-[#2C2100] text-lg max-w-xl font-light"
           >
             Three offers. Each with a clear outcome. Pick the one that matches where you are.
           </motion.p>
         </div>
 
         {/* Service cards */}
-        <div className="grid md:grid-cols-3 gap-px bg-black/15">
+        <div className="grid md:grid-cols-3 gap-px bg-[#C4A010]/40">
           {services.map((s, i) => (
             <motion.div
               key={s.id}
@@ -96,7 +96,7 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: EASE }}
-              className="relative bg-black/5 p-8 md:p-10 flex flex-col group hover:bg-black/10 transition-colors duration-300"
+              className="relative bg-[#EDB80D] p-8 md:p-10 flex flex-col group hover:bg-[#E8B20A] transition-colors duration-300"
             >
               {/* Bottom red rule */}
               <motion.div
@@ -110,7 +110,7 @@ export function ServicesSection() {
               {/* Eyebrow + number */}
               <div className="flex items-center justify-between mb-5">
                 <span className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.4em]">{s.eyebrow}</span>
-                <span className="text-black/20 text-4xl font-black leading-none">{s.id}</span>
+                <span className="text-[#C4A010]/60 text-4xl font-black leading-none">{s.id}</span>
               </div>
 
               {/* Title */}
@@ -121,7 +121,7 @@ export function ServicesSection() {
               {/* Price + tag */}
               <div className="flex items-baseline gap-3 mb-5">
                 <span className="text-[#C62B1E] font-black text-lg">{s.price}</span>
-                <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.2em] border border-[#6B6560]/30 px-2 py-0.5">{s.tag}</span>
+                <span className="text-[#6B5820] text-[10px] font-black uppercase tracking-[0.2em] border border-[#6B5820]/30 px-2 py-0.5">{s.tag}</span>
               </div>
 
               {/* Conversational question */}
@@ -130,14 +130,14 @@ export function ServicesSection() {
               </p>
 
               {/* Description */}
-              <p className="text-[#3A3835] font-light text-sm leading-relaxed mb-6 flex-1">
+              <p className="text-[#2C2100] font-light text-sm leading-relaxed mb-6 flex-1">
                 {s.description}
               </p>
 
               {/* Deliverable */}
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-4 h-px bg-[#C62B1E]" />
-                <span className="text-[#6B6560] text-[10px] font-black uppercase tracking-[0.2em]">{s.deliverable}</span>
+                <span className="text-[#6B5820] text-[10px] font-black uppercase tracking-[0.2em]">{s.deliverable}</span>
               </div>
 
               {/* CTA */}
@@ -157,7 +157,7 @@ export function ServicesSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="text-[#6B6560] text-xs font-medium mt-10 text-center uppercase tracking-[0.3em]"
+          className="text-[#6B5820] text-xs font-medium mt-10 text-center uppercase tracking-[0.3em]"
         >
           Not sure where to start? The Viral Diagnostic™ is always the right first step.
         </motion.p>

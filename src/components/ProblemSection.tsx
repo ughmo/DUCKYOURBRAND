@@ -24,7 +24,7 @@ export function ProblemSection() {
   const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="results" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
+    <section id="results" className="py-32 bg-[#F5C518] border-t border-[#C4A010]/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         <div ref={headerRef} className="mb-16">
@@ -59,13 +59,13 @@ export function ProblemSection() {
             initial={{ opacity: 0, y: 12 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.2, ease: EASE }}
-            className="text-[#3A3835] text-lg max-w-xl font-light leading-relaxed"
+            className="text-[#2C2100] text-lg max-w-xl font-light leading-relaxed"
           >
             Most brands are paying agencies to post content nobody sees. The numbers don&apos;t lie.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-black/15 mb-px">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#C4A010]/40 mb-px">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -84,7 +84,7 @@ export function ProblemSection() {
               >
                 {s.number}
               </motion.div>
-              <div className="text-[#3A3835] text-xs font-medium leading-snug">{s.label}</div>
+              <div className="text-[#2C2100] text-xs font-medium leading-snug">{s.label}</div>
             </motion.div>
           ))}
         </div>
@@ -111,7 +111,7 @@ export function ProblemSection() {
                 5M+ organic views.<br />Zero ad spend.<br />
                 <span className="text-[#C62B1E]">Proven. Repeatable.</span>
               </h3>
-              <p className="text-[#3A3835] font-light leading-relaxed">
+              <p className="text-[#2C2100] font-light leading-relaxed">
                 No agency in UAE can show organic viral results. DYB can.
                 The market is wide open. The timing is now.
               </p>

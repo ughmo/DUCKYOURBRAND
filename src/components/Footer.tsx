@@ -13,7 +13,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <DYBLogo size="md" />
+            <DYBLogo size="md" color="#F5C518" />
             <p className="text-[#6B6560] text-xs font-medium mt-3 tracking-wider">
               If it&apos;s comfortable, you&apos;re doing something wrong.
             </p>

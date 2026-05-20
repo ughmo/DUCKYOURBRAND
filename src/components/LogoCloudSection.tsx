@@ -18,14 +18,14 @@ const logos = [
 
 function LogoItem({ name, sub }: { name: string; sub: string }) {
   return (
-    <div className="flex flex-col items-center justify-center px-8 py-4 border border-black/15 bg-black/5 hover:border-[#C62B1E]/40 transition-colors duration-300 min-w-[140px]">
+    <div className="flex flex-col items-center justify-center px-8 py-4 border border-[#C4A010]/40 bg-black/5 hover:border-[#C62B1E]/40 transition-colors duration-300 min-w-[140px]">
       <span
         className="text-[#0D0D0D] font-black text-sm uppercase tracking-[0.15em] leading-none whitespace-nowrap"
         style={{ fontFamily: "'Poppins', sans-serif" }}
       >
         {name}
       </span>
-      <span className="text-[#3A3835] text-[9px] font-medium uppercase tracking-[0.3em] mt-1">
+      <span className="text-[#6B5820] text-[9px] font-medium uppercase tracking-[0.3em] mt-1">
         {sub}
       </span>
     </div>
@@ -34,7 +34,7 @@ function LogoItem({ name, sub }: { name: string; sub: string }) {
 
 export function LogoCloudSection() {
   return (
-    <section className="py-20 bg-[#F5C518] border-t border-black/10 overflow-hidden">
+    <section className="py-20 bg-[#F5C518] border-t border-[#C4A010]/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-10">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -46,7 +46,7 @@ export function LogoCloudSection() {
           <p className="text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.5em] mb-3">
             The brands making noise. The rest are just posting.
           </p>
-          <div className="mx-auto h-px max-w-sm bg-black/15 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
+          <div className="mx-auto h-px max-w-sm bg-[#C4A010]/40 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
         </motion.div>
       </div>
 
@@ -69,7 +69,7 @@ export function LogoCloudSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 mt-10">
-        <div className="h-px bg-black/15 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
+        <div className="h-px bg-[#C4A010]/40 [mask-image:linear-gradient(to_right,transparent,black,transparent)]" />
       </div>
     </section>
   );

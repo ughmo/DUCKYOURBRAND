@@ -20,6 +20,12 @@ export function HeroSection() {
         style={{ opacity: 0.04, mixBlendMode: "multiply" }}
       />
 
+      {/* Radial depth — lighter centre fading to slightly richer yellow at edges */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at 30% 40%, rgba(255,255,255,0.12) 0%, transparent 65%)" }}
+      />
+
       {/* Top shadow — blends the black nav into the yellow hero */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
 

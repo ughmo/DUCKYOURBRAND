@@ -69,7 +69,7 @@ export function TestimonialsSection() {
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="py-24 md:py-36 bg-[#F5C518] border-t border-black/10 overflow-hidden"
+      className="py-24 md:py-36 bg-[#F5C518] border-t border-[#C4A010]/40 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -112,7 +112,7 @@ export function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.25, ease: EASE }}
-            className="text-[#3A3835] text-base font-light leading-relaxed mt-4"
+            className="text-[#2C2100] text-base font-light leading-relaxed mt-4"
           >
             From Egypt to the UAE — brands that stopped paying for invisible content.
           </motion.p>
@@ -139,7 +139,7 @@ export function TestimonialsSection() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 text-[#3A3835] hover:text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.4em] transition-colors duration-300 group"
+            className="inline-flex items-center gap-3 text-[#6B5820] hover:text-[#C62B1E] text-[10px] font-black uppercase tracking-[0.4em] transition-colors duration-300 group"
           >
             <span className="w-8 h-px bg-current group-hover:w-12 transition-all duration-300" />
             Become the next proof

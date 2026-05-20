@@ -13,21 +13,21 @@ type StoryLine = {
 };
 
 const STORY: StoryLine[] = [
-  { text: "A misfit gray duck",                    color: "#6B6560", size: "clamp(0.95rem, 1.6vw, 1.8rem)",  weight: "300", mt: "0"    },
+  { text: "A misfit gray duck",                    color: "#6B5820", size: "clamp(0.95rem, 1.6vw, 1.8rem)",  weight: "300", mt: "0"    },
   { text: "wished he was a yellow duck.",           color: "#0D0D0D", size: "clamp(1.4rem, 2.6vw, 3rem)",    weight: "900", mt: "3px"  },
-  { text: "So he wore one on his cap and clothes",  color: "#3A3835", size: "clamp(0.8rem, 1.1vw, 1.25rem)", weight: "300", mt: "18px" },
-  { text: "to fit in.",                             color: "#6B6560", size: "clamp(0.9rem, 1.4vw, 1.6rem)",  weight: "400", mt: "2px"  },
+  { text: "So he wore one on his cap and clothes",  color: "#2C2100", size: "clamp(0.8rem, 1.1vw, 1.25rem)", weight: "300", mt: "18px" },
+  { text: "to fit in.",                             color: "#6B5820", size: "clamp(0.9rem, 1.4vw, 1.6rem)",  weight: "400", mt: "2px"  },
   { text: "It worked.",                             color: "#0D0D0D", size: "clamp(1.8rem, 3.5vw, 4.5rem)",  weight: "900", mt: "18px" },
-  { text: "He looked like everyone else.",          color: "#3A3835", size: "clamp(0.8rem, 1.1vw, 1.25rem)", weight: "300", mt: "3px"  },
+  { text: "He looked like everyone else.",          color: "#2C2100", size: "clamp(0.8rem, 1.1vw, 1.25rem)", weight: "300", mt: "3px"  },
   { text: "So no one remembered him.",              color: "#0D0D0D", size: "clamp(1.1rem, 2.2vw, 2.6rem)",  weight: "900", mt: "18px" },
-  { text: "Still a misfit.",                        color: "#3A3835", size: "clamp(0.9rem, 1.5vw, 1.8rem)",  weight: "500", mt: "18px" },
-  { text: "Just hidden.",                           color: "#6B6560", size: "clamp(0.75rem, 1vw, 1.2rem)",   weight: "300", mt: "2px"  },
-  { text: "Stop pretending to be the yellow duck.", color: "#3A3835", size: "clamp(0.85rem, 1.3vw, 1.5rem)", weight: "400", mt: "18px", italic: true },
+  { text: "Still a misfit.",                        color: "#2C2100", size: "clamp(0.9rem, 1.5vw, 1.8rem)",  weight: "500", mt: "18px" },
+  { text: "Just hidden.",                           color: "#6B5820", size: "clamp(0.75rem, 1vw, 1.2rem)",   weight: "300", mt: "2px"  },
+  { text: "Stop pretending to be the yellow duck.", color: "#2C2100", size: "clamp(0.85rem, 1.3vw, 1.5rem)", weight: "400", mt: "18px", italic: true },
 ];
 
 export function AboutSection() {
   return (
-    <section id="about" style={{ background: "#F5C518", borderTop: "1px solid rgba(0,0,0,0.1)", overflow: "hidden" }}>
+    <section id="about" style={{ background: "#F5C518", borderTop: "1px solid rgba(196,160,16,0.4)", overflow: "hidden" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "4rem 1.5rem" }}>
 
         {/*

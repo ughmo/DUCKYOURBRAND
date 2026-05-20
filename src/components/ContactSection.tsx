@@ -26,7 +26,7 @@ const requirements = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-32 bg-[#F5C518] border-t border-black/10 overflow-hidden">
+    <section id="contact" className="py-32 bg-[#F5C518] border-t border-[#C4A010]/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ── Main contact grid ── */}
@@ -69,7 +69,7 @@ export function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.25, ease: EASE }}
-              className="text-[#3A3835] font-light leading-relaxed mb-8 max-w-md"
+              className="text-[#2C2100] font-light leading-relaxed mb-8 max-w-md"
             >
               We don&apos;t work with everyone. We work with founders who want results more than they want approval.
             </motion.p>
@@ -176,7 +176,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15, ease: EASE }}
-          className="mt-20 pt-12 border-t border-black/10"
+          className="mt-20 pt-12 border-t border-[#C4A010]/40"
         >
           <div className="flex items-center gap-3 mb-5">
             <span className="w-8 h-px bg-[#C62B1E]" aria-hidden="true" />
@@ -185,11 +185,11 @@ export function ContactSection() {
             </span>
           </div>
 
-          <p className="text-[#3A3835] text-sm font-light mb-8 max-w-lg">
+          <p className="text-[#2C2100] text-sm font-light mb-8 max-w-lg">
             UAE-first. Engineered for the Arab world. One system — built to dominate every MENA market.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-px bg-black/10">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-px bg-[#C4A010]/40">
             {MENA.map(({ flag, name }, i) => (
               <motion.div
                 key={name}
@@ -200,7 +200,7 @@ export function ContactSection() {
                 className="bg-black/5 px-5 py-4 flex items-center gap-3 group hover:bg-black/10 transition-colors duration-200"
               >
                 <span className="text-lg leading-none select-none" aria-hidden="true">{flag}</span>
-                <span className="text-[#3A3835] group-hover:text-[#0D0D0D] text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-200">
+                <span className="text-[#2C2100] group-hover:text-[#0D0D0D] text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-200">
                   {name}
                 </span>
               </motion.div>
