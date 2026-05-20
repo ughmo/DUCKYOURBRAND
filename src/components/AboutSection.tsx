@@ -39,9 +39,10 @@ export function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-10 md:gap-12 items-center">
 
           {/* MASCOT — full width centered on mobile, left column on desktop */}
+          {/* Mascot lives in a dark panel — the duck in the dark world, story in the yellow world */}
           <div
             className="flex justify-center md:block"
-            style={{ backgroundColor: "#F5C518", lineHeight: 0 }}
+            style={{ backgroundColor: "#0D0D0D", lineHeight: 0 }}
           >
             <img
               src="/mascot-suit.png"
